@@ -52,6 +52,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.1 =
+September 10th, 2014
+* Fixed Theme URI
+* Fixed Screenshot
+
 = 1.0.0 =
 September 10th, 2014
 * Initial release
