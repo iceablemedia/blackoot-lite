@@ -64,6 +64,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.5 =
+February 6th, 2015
+* Removed analytics tagging on external links in Theme Options
+* Removed obsolete code in comments.php
+
 = 1.0.4 =
 February 2nd, 2015
 * Fixed: made all text strings translatable in front-end and back-end.

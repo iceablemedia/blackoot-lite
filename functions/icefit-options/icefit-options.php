@@ -134,13 +134,13 @@ function blackoot_settings_machine($options) {
 <li>Currently supports WordPress from 3.5 up to 4.1</strong></li>
 </ul>
 <a href="%s" class="button-primary" target="_blank">Learn More and Upgrade Now!</a>', 'blackoot'),
-	'http://www.iceablethemes.com/shop/blackoot-pro/?utm_source=lite_theme&utm_medium=go_pro&utm_campaign=blackoot_lite');
+	'http://www.iceablethemes.com/shop/blackoot-pro/');
 		}
 		elseif ( $arg['type'] == "support_feedback" )
 		{
 			$output .= '<h3>'.__('Get Support','blackoot').'</h3>'."\n";
 			$output .= '<p>'.__('Have a question? Need help?', 'blackoot').'</p>';
-			$output .= '<p><a href="http://www.iceablethemes.com/forums/forum/free-support-forum/blackoot-lite/?utm_source=lite_theme&utm_medium=support_forums&utm_campaign=blackoot_lite" target="_blank" class="button-primary">'.__('Visit the free Blackoot Lite support forums','blackoot').'</a></p>';
+			$output .= '<p><a href="http://www.iceablethemes.com/forums/forum/free-support-forum/blackoot-lite/" target="_blank" class="button-primary">'.__('Visit the free Blackoot Lite support forums','blackoot').'</a></p>';
 
 			$output .= '<h3>'.__('Give Feedback', 'blackoot').'</h3>'."\n";
 			$output .= '<p>'.__('Like this theme? We\'d love to hear your feedback!','blackoot').'</p>';
