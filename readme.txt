@@ -64,6 +64,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.3 =
+November 23rd, 2015
+* Fixed issue with sidebar in WordPress 4.4
+* Tested with WordPress 4.4 (beta 4)
+
 = 1.1.2 =
 November 4th, 2015
 * Fixed footer menu alignment
