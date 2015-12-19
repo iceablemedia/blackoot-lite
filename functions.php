@@ -61,7 +61,7 @@ add_action('after_setup_theme', 'blackoot_setup');
 function blackoot_content_width() {
 	global $content_width;
 	if ( is_page_template( 'page-full-width.php' ) )
-		$content_width = 920;	
+		$content_width = 920;
 }
 add_action( 'template_redirect', 'blackoot_content_width' );
 
@@ -97,10 +97,10 @@ function blackoot_add_menu_parent_class( $items ) {
 	}
 	foreach ( $items as $item ) {
 		if ( in_array( $item->ID, $parents ) ) {
-			$item->classes[] = 'menu-parent-item'; 
+			$item->classes[] = 'menu-parent-item';
 		}
 	}
-	return $items;    
+	return $items;
 }
 add_filter( 'wp_nav_menu_objects', 'blackoot_add_menu_parent_class' );
 
@@ -115,7 +115,7 @@ function blackoot_widgets_init() {
 		'after_title'   => '</h3>',
 		)
 	);
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'blackoot' ),
 		'id'            => 'footer-sidebar',
@@ -162,6 +162,12 @@ function blackoot_styles() {
 	wp_enqueue_style( 'font-awesome', $template_directory_uri . "/css/font-awesome/css/font-awesome.min.css" );
 
 	// Google Webfonts
+	if ( !is_user_logged_in() ):
+		// Enqueue Open Sans if the current user is not logged in
+		// WordPress already adds Open Sans for logged in users
+		wp_enqueue_style( 'Open-sans-webfonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
+	endif;
+
 	wp_enqueue_style( 'Quicksand-webfonts', "//fonts.googleapis.com/css?family=Quicksand:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
 
 }
@@ -194,7 +200,7 @@ function blackoot_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category tag"', "", $text);
 	return $text;
 }
-add_filter( 'the_category', 'blackoot_remove_rel_cat' ); 
+add_filter( 'the_category', 'blackoot_remove_rel_cat' );
 
 /*
  * Customize "read more" links on index view
@@ -229,7 +235,7 @@ function blackoot_trim_excerpt($text = '') {
 		if ( ( preg_match('/<!--more(.*?)?-->/', $post->post_content ) || preg_match('/<!--nextpage-->/', $post->post_content ) ) && strpos($text,$excerpt_more) === false ) {
 		 $text .= $excerpt_more;
 		}
-		
+
 	}
 	return apply_filters('blackoot_trim_excerpt', $text, $raw_excerpt);
 }
@@ -259,7 +265,7 @@ function blackoot_dropdown_nav_menu() {
 		}
 		$menu_list .= '</select>';
    		// $menu_list now ready to output
-   		echo $menu_list;    
+   		echo $menu_list;
 		}
     }
 }
@@ -272,19 +278,19 @@ function blackoot_article_nav(){
 	if ("" != get_adjacent_post( false, "", false ) || "" != get_adjacent_post( false, "", true ) ):
 
 		echo '<div class="article_nav">';
-		
+
 		if ("" != get_adjacent_post( false, "", false ) ): // Is there a previous post?
 			echo '<div class="next navbutton">',
 				next_post_link('%link', __('Next Post', 'blackoot') . '<i class="fa fa-angle-double-right"></i>' ),
 				'</div>';
 		endif;
-	
+
 		if ("" != get_adjacent_post( false, "", true ) ): // Is there a next post?
 			echo '<div class="previous navbutton">',
 				previous_post_link('%link', '<i class="fa fa-angle-double-left"></i>' . __('Previous Post', 'blackoot') ),
 				'</div>';
 		endif;
-	
+
 		echo '<br class="clear" /></div>';
 
 	endif;
@@ -301,12 +307,12 @@ function blackoot_page_has_comments_nav() {
 function blackoot_page_has_next_comments_link() {
 	global $wp_query;
 	$max_cpage = $wp_query->max_num_comment_pages;
-	$cpage = get_query_var( 'cpage' );	
+	$cpage = get_query_var( 'cpage' );
 	return ( $max_cpage > $cpage );
 }
 
 function blackoot_page_has_previous_comments_link() {
-	$cpage = get_query_var( 'cpage' );	
+	$cpage = get_query_var( 'cpage' );
 	return ($cpage > 1);
 }
 
@@ -341,7 +347,7 @@ function blackoot_breadcrumbs() {
 	if (!$sep) $sep = '/';
 
 	if (!is_front_page()):
-	
+
 		echo '<a href="', esc_url(home_url()), '">', __('Home', 'blackoot'), '</a><span class="separator"> ', $sep, ' </span>';
 
 		if (is_home()):

@@ -64,6 +64,12 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.1 =
+August 31th, 2015
+* Added screen-reader-text CSS support
+* Enqueue "Open Sans" webfont for non-logged in users
+* Tested with WordPress 4.3
+
 = 1.1.0 =
 July 22th, 2015
 * Replaced theme options panel with Customizer implementation

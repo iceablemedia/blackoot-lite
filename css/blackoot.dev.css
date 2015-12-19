@@ -261,6 +261,15 @@ figure figcaption,
 
 .gallery-item img { padding: 0 5px; box-sizing: border-box; -moz-box-sizing: border-box; }
 
+.screen-reader-text {
+	font-size: 0;
+}
+
+.screen-reader-text:focus {
+	font-size: 14px;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
 /* #Base Grid */
 
 .container {
@@ -385,7 +394,7 @@ or wrap each row of columns in a <div class="row"> */
 ================================================== */
 
 #main-wrap {
-	background: #202020; 
+	background: #202020;
 	width: 1000px;
 	margin: 0 auto;
 }
@@ -650,7 +659,7 @@ h3.entry-title {
 	font-weight: normal;
 	background: rgba(255, 255, 255, 0.05);
 	box-sizing: border-box;
-	padding-right: 5px; 
+	padding-right: 5px;
 	margin: 0px 1px 1px 0px;
 	line-height: 25px;
 }
@@ -757,7 +766,7 @@ h3.entry-title {
 
 /* #Single Post */
 
-.single-post .post-contents {	
+.single-post .post-contents {
 
 }
 
@@ -815,7 +824,7 @@ h3.entry-title {
 .commentlist {
 	margin-left: 0;
 	text-indent: 0;
-	list-style: none;	
+	list-style: none;
 }
 
 .commentlist .comment {
@@ -1062,7 +1071,6 @@ p.comment-form-url
 }
 
 #searchform label {
-	font-size: 0;
 	position: absolute;
 	top: 3px;
 	right: 8px;
@@ -1399,7 +1407,7 @@ blockquote, blockquote p {
 	font-style: italic;
 }
 
-blockquote {	
+blockquote {
 	margin: 0 40px 20px 40px;
 	padding: 10px 20px;
 	border-left: 3px solid #444;
@@ -1457,7 +1465,7 @@ th {
 }
 
 tr {
-	 
+
 }
 
 tr:nth-child(even) {
@@ -1665,7 +1673,7 @@ textarea,
 	#main-wrap { width: 768px; }
 
 	.tophead { padding-right: 15px; }
-	
+
 	#logo { padding: 0 15px; }
 
 	#nav-wrap { padding: 0; }
@@ -1677,9 +1685,9 @@ textarea,
 		margin-bottom: 20px;
 	}
 	#page-container > hr { margin: 40px 0; }
-	
+
 	.container	  { width: 768px; }
-	#page-container { width: 766px; }	
+	#page-container { width: 766px; }
 	#page-container.with-sidebar { width: 576px; }
 	#sidebar-container { width: 172px; }
 
@@ -1759,7 +1767,7 @@ textarea,
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 	#main-wrap { width: 440px; }
-	
+
 	#nav-wrap { padding: 0 10px; }
 
 	#page-container > *,
