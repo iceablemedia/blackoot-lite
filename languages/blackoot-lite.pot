@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Blackoot Lite 1.0.0\n"
-"POT-Creation-Date: 2014-09-08 16:12+0100\n"
-"PO-Revision-Date: 2014-09-08 16:12+0100\n"
+"Project-Id-Version: Blackoot Lite 1.0.4\n"
+"POT-Creation-Date: 2015-02-02 11:28+0100\n"
+"PO-Revision-Date: 2015-02-02 11:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: Iceable Themes\n"
 "Language: en_US\n"
@@ -19,13 +19,17 @@ msgstr ""
 msgid "Page Not Found"
 msgstr ""
 
-#: ../404.php:20 ../index.php:105 ../page-full-width.php:56 ../page.php:56
-#: ../single.php:105
+#: ../404.php:20 ../index.php:105 ../page.php:56 ../single.php:105
+#: ../page-templates/full-width.php:56
 msgid "What you are looking for isn't here..."
 msgstr ""
 
 #: ../404.php:21
 msgid "Maybe a search will help ?"
+msgstr ""
+
+#: ../comments.php:14
+msgid "Please do not load this page directly. Thanks!"
 msgstr ""
 
 #: ../comments.php:17
@@ -49,8 +53,27 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../footer.php:24
-msgid "Proudly powered by"
+#: ../footer.php:23
+#, php-format
+msgid "Copyright &copy; %s %s."
+msgstr ""
+
+#: ../footer.php:25
+#, php-format
+msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr ""
+
+#: ../footer.php:26
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: ../footer.php:28
+msgid "WordPress"
+msgstr ""
+
+#: ../footer.php:31
+#, php-format
+msgid "Blackoot design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 msgstr ""
 
 #: ../functions.php:80
@@ -58,60 +81,55 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: ../functions.php:126
-#, php-format
-msgid "<a href=\"%1$s\" style=\"float:right\">Dismiss</a>"
-msgstr ""
-
-#: ../functions.php:147
+#: ../functions.php:119
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:155
+#: ../functions.php:127
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:274
+#: ../functions.php:211
 msgid "Read More"
 msgstr ""
 
-#: ../functions.php:348
+#: ../functions.php:285
 msgid "Next Post"
 msgstr ""
 
-#: ../functions.php:354
+#: ../functions.php:291
 msgid "Previous Post"
 msgstr ""
 
-#: ../functions.php:415
+#: ../functions.php:352
 msgid "Home"
 msgstr ""
 
-#: ../functions.php:447
+#: ../functions.php:378
 msgid "Daily Archives"
 msgstr ""
 
-#: ../functions.php:448
+#: ../functions.php:379
 msgid "Monthly Archives"
 msgstr ""
 
-#: ../functions.php:449
+#: ../functions.php:380
 msgid "Yearly Archives"
 msgstr ""
 
-#: ../functions.php:450
+#: ../functions.php:381
 msgid "Author Archives"
 msgstr ""
 
-#: ../functions.php:451
+#: ../functions.php:382
 msgid "Blog Archives"
 msgstr ""
 
-#: ../functions.php:452
+#: ../functions.php:383
 msgid "Search Results"
 msgstr ""
 
-#: ../functions.php:453
+#: ../functions.php:384
 msgid "404 Error"
 msgstr ""
 
@@ -140,12 +158,13 @@ msgstr ""
 msgid "Comments Off"
 msgstr ""
 
-#: ../index.php:76 ../page-full-width.php:41 ../page.php:41 ../single.php:59
+#: ../index.php:76 ../page.php:41 ../single.php:59
+#: ../page-templates/full-width.php:41
 msgid "Edit"
 msgstr ""
 
-#: ../index.php:97 ../index.php:104 ../page-full-width.php:55 ../page.php:55
-#: ../single.php:104
+#: ../index.php:97 ../index.php:104 ../page.php:55 ../single.php:104
+#: ../page-templates/full-width.php:55
 msgid "Not Found"
 msgstr ""
 
@@ -166,40 +185,40 @@ msgstr ""
 msgid "Next Posts"
 msgstr ""
 
-#: ../page-full-width.php:31 ../page.php:31 ../single.php:75
+#: ../page.php:31 ../single.php:75 ../page-templates/full-width.php:31
 msgid "Pages:"
 msgstr ""
 
-#: ../page-title.php:22
+#: ../part-title.php:22
 msgid "404: Page Not Found"
 msgstr ""
 
-#: ../page-title.php:27
+#: ../part-title.php:27
 #, php-format
 msgid "Search Results for \"%s\""
 msgstr ""
 
-#: ../page-title.php:32
+#: ../part-title.php:32
 #, php-format
 msgid "Tag: %s"
 msgstr ""
 
-#: ../page-title.php:37
+#: ../part-title.php:37
 #, php-format
 msgid "Category: %s"
 msgstr ""
 
-#: ../page-title.php:42
+#: ../part-title.php:42
 #, php-format
 msgid "Daily archives: %s"
 msgstr ""
 
-#: ../page-title.php:46
+#: ../part-title.php:46
 #, php-format
 msgid "Monthly archives: %s"
 msgstr ""
 
-#: ../page-title.php:50
+#: ../part-title.php:50
 #, php-format
 msgid "Yearly archives: %s"
 msgstr ""
@@ -228,14 +247,294 @@ msgstr ""
 msgid "Theme Options"
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:87
+#: ../functions/icefit-options/icefit-options.php:37
+msgid "Settings saved."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:38
+msgid ""
+"Are you sure you want to reset ALL settings for this theme to default values?"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:93
 msgid "Upload Image"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:94
+msgid "Remove"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:100
+#, php-format
+msgid ""
+"<p>Unleash the full potential of Blackoot by upgrading to Blackoot Pro!</p>\n"
+"<p>The Pro version comes with a great set of awesome features:</p>\n"
+"<ul>\n"
+"<li>(Lite & Pro) Fully <strong>Responsive Design</strong></li>\n"
+"<li>(Lite & Pro) <strong>Translation Ready</strong> (.POT file included)</"
+"li>\n"
+"<li>(Lite & Pro) <strong>Child Theme</strong> support</li>\n"
+"<li>(Lite & Pro) 2 <strong>Widgetized areas</strong> (Sidebar and Footer)</"
+"li>\n"
+"<li>(Lite & Pro) <strong>Custom background</strong></li>\n"
+"<li>(Lite & Pro) <strong>Font Awesome</strong> icons included</li>\n"
+"<li>(Lite & Pro) <strong>Breadcrumbs</strong> included</li>\n"
+"<li>(Pro Only) <strong>Unlimited sidebars and footers</strong> with "
+"different widgets for different pages</li>\n"
+"<li>(Pro Only) Quick Setup <strong>Page Templates</strong></li>\n"
+"<li>(Pro Only) <strong>Right or Left sidebar or Full Width</strong> template "
+"for pages and blog.</li>\n"
+"<li>(Pro Only) <strong>Built-in Slider</strong> for <strong>Unlimited "
+"Slideshows</strong></li>\n"
+"<li>(Pro Only) <strong>Wide</strong> or <strong>Boxed</strong> layout</li>\n"
+"<li>(Pro Only) <strong>Portfolio</strong> section</li>\n"
+"<li>(Pro Only) <strong>Unlimited colors</strong></li>\n"
+"<li>(Pro Only) <strong>650 Webfonts</strong> to choose from</li>\n"
+"<li>(Pro Only) <strong>Comprehensive settings panel</strong> with dozens of "
+"options</li>\n"
+"<li>(Pro Only) <strong>Sticky (fixed) Navbar</strong> when scrolling for "
+"enhanced navigation</li>\n"
+"<li>(Pro Only) jQuery <strong>\"Slide-in\" mobile menu</strong> in "
+"responsive mode</li>\n"
+"<li>(Pro Only) Enhanced <strong>WYSIWYG Layout Builder</strong> in WP Visual "
+"Editor</li>\n"
+"<li>(Pro Only) <strong>Visual Shortcodes</strong>, fully integrated in "
+"WordPress' Visual editor (no coding!)</li>\n"
+"<li>(Pro Only) Powerful <strong>shortcodes</strong> and <strong>custom "
+"widgets</strong></li>\n"
+"<li>(Pro Only) <strong>Partners and/or Clients' logos</strong> carousel</"
+"li>\n"
+"<li>(Pro Only) <strong>Clients' testimonials</strong> carousel</li>\n"
+"<li>(Pro Only) One click setup <strong>AJAX contact form</strong></li>\n"
+"<li>(Pro Only) <strong>Google Maps</strong> API v3 integration</li>\n"
+"<li>(Pro Only) Built-in <strong>Social Media icons</strong> linking to your "
+"social networks pages</li>\n"
+"<li>(Pro Only) <strong>Custom CSS</strong> support for even more advanced "
+"layout customizations</li>\n"
+"<li>(Pro Only) <strong>Pro dedicated support forum</strong> access</li>\n"
+"<li><a href=\"http://www.gnu.org/licenses/\" target=\"_blank\">GPL License</"
+"a> : Buy once, use as many times as you wish!</li>\n"
+"<li><strong>Cross-browsers support</strong>, optimized for IE8+, Firefox, "
+"Chrome, Safari and Opera (note: IE7 and older are no longer supported.)</"
+"li>\n"
+"<li>Lifetime <strong>free updates</strong> and continued support for the "
+"<strong>latest WordPress versions</strong></li>\n"
+"<li>Currently supports WordPress from 3.5 up to 4.1</strong></li>\n"
+"</ul>\n"
+"<a href=\"%s\" class=\"button-primary\" target=\"_blank\">Learn More and "
+"Upgrade Now!</a>"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:141
+msgid "Get Support"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:142
+msgid "Have a question? Need help?"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:143
+msgid "Visit the free Blackoot Lite support forums"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:145
+msgid "Give Feedback"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:146
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:147
+msgid "Rate and review Blackoot Lite at WordPress.org"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:149
+msgid "Get social!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:150
+msgid "Follow and like IceableThemes!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:165
+#: ../functions/icefit-options/icefit-options.php:185
+#: ../functions/icefit-options/icefit-options.php:229
+msgid "You do not have permission to edit theme options."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:271
+msgid "Settings were reset to default."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:276
+msgid "Settings updated."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:281
+msgid ""
+"<b>Warning:</b> Javascript is either disabled in your browser or broken in "
+"your WP installation.<br />\n"
+"\tThis is ok, but it is highly recommended to activate javascript for a "
+"better experience.<br />\n"
+"\tIf javascript is not blocked in your browser then this may be caused by a "
+"third party plugin.<br />\n"
+"\tMake sure everything is up to date or try to deactivate some plugins."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:289
+#, php-format
+msgid ""
+"<strong>Blackoot Lite Notice:</strong> you have not set your primary menu "
+"yet, and your site is currently using a fallback menu which is not "
+"responsive. Please take a minute to <a href=\"%s\">set your menu now</a>!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:312
+#: ../functions/icefit-options/icefit-options.php:316
+msgid "Save all Changes"
 msgstr ""
 
 #: ../functions/icefit-options/settings.php:16
 msgid "Blackoot Lite Settings"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:97
+#: ../functions/icefit-options/settings.php:28
+msgid "Go Pro"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:35
+msgid "Upgrade to Blackoot Pro!"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:48
+msgid "Main settings"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:55
+msgid "Logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:56
+msgid "Upload your own logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:63
+msgid "Site Title"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:64
+msgid ""
+"Choose \"display title\" if you want to use a text-based title instead of an "
+"uploaded logo."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:69
+msgid "Use Logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:70
+msgid "Display Title"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:75
+msgid "Favicon"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:76
+msgid ""
+"Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG "
+"(W3C standard), GIF, or ICO."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:83
+msgid "Display Tagline"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:84
+msgid ""
+"Display your site description (tagline) on the right side of the header."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:89
+#: ../functions/icefit-options/settings.php:114
+#: ../functions/icefit-options/settings.php:136
+#: ../functions/icefit-options/settings.php:148
+#: ../functions/icefit-options/settings.php:160
+#: ../functions/icefit-options/settings.php:172
+msgid "Off"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:90
+#: ../functions/icefit-options/settings.php:113
+#: ../functions/icefit-options/settings.php:135
+#: ../functions/icefit-options/settings.php:147
+#: ../functions/icefit-options/settings.php:159
+#: ../functions/icefit-options/settings.php:171
+msgid "On"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:95
+msgid "Blog Index Shows"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:96
+msgid "Choose what content to display on Main Blog page and archives"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:101
+msgid "Excerpt"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:102
+msgid "Full content"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:107
 msgid "Responsive mode"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:108
+msgid "Turn this setting off if you want your site to be unresponsive."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:122
+msgid "Custom Header"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:129
+msgid "Display custom header on Homepage"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:130
+msgid "Enable or disable display of custom header image on the front page."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:141
+msgid "Display custom header on Blog Index"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:142
+msgid "Enable or disable display of custom header image on blog index pages."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:153
+msgid "Display custom header on Blog Posts"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:154
+msgid "Enable or disable display of custom header image on single blog posts"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:165
+msgid "Display custom header on Pages"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:166
+msgid "Enable or disable display of custom header image on individual pages."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:181
+#: ../functions/icefit-options/settings.php:188
+msgid "Support and Feedback"
 msgstr ""

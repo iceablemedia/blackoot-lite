@@ -3,7 +3,7 @@
  *
  * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2014-2015 Mathieu Sarrasin - Iceable Media
  *
  * Admin settings template
  *
@@ -16,6 +16,7 @@ include_once('icefit-options.php');
 $blackoot_settings_name = __("Blackoot Lite Settings", 'blackoot');
 $blackoot_settings_slug = "blackoot_settings";
 
+
 // Set settings template (returns an array)
 function blackoot_settings_template() {
 
@@ -24,14 +25,14 @@ function blackoot_settings_template() {
 // START PAGE 0
 
 	$settings_options[] = array(
-		'name'          => 'Go Pro',
+		'name'          => __('Go Pro', 'blackoot'),
 		'type'          => 'start_menu',
 		'id'            => 'gopro_page',
 		'icon'          => 'down',
 	);
 
 		$settings_options[] = array(
-			'name'          => 'Upgrade to Blackoot Pro!',
+			'name'          => __('Upgrade to Blackoot Pro!', 'blackoot'),
 			'desc'          => '',
 			'id'            => 'gopro',
 			'type'          => 'gopro',
@@ -44,108 +45,132 @@ function blackoot_settings_template() {
 
 // START PAGE 1
 	$settings_options[] = array(
-		'name'          => 'Main settings',
+		'name'          => __('Main settings', 'blackoot'),
 		'type'          => 'start_menu',
 		'id'            => 'main',
 		'icon'          => 'control',
 	);
 
 		$settings_options[] = array(
-			'name'          => 'Logo',
-			'desc'          => 'Upload your own logo',
+			'name'          => __('Logo', 'blackoot'),
+			'desc'          => __('Upload your own logo', 'blackoot'),
 			'id'            => 'logo',
 			'type'          => 'image',
 			'default'       => '',
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Site Title',
-			'desc'          => 'Choose "display title" if you want to use a text-based title instead of an uploaded logo.',
+			'name'          => __('Site Title', 'blackoot'),
+			'desc'          => __('Choose "display title" if you want to use a text-based title instead of an uploaded logo.', 'blackoot'),
 			'id'            => 'header_title',
 			'type'          => 'radio',
 			'default'       => 'Use Logo',
-			'values'		=> array ('Use Logo', 'Display Title'),
+			'values'		=> array (
+								array( 'value' => 'Use Logo', 'display' => __('Use Logo', 'blackoot') ),
+								array( 'value' => 'Display Title', 'display' => __('Display Title', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Favicon',
-			'desc'          => 'Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG (W3C standard), GIF, or ICO.',
+			'name'          => __('Favicon', 'blackoot'),
+			'desc'          => __('Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG (W3C standard), GIF, or ICO.', 'blackoot'),
 			'id'            => 'favicon',
 			'type'          => 'image',
 			'default'       => '',
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Display Tagline',
-			'desc'          => 'Display your site description (tagline) on the right side of the header.',
+			'name'          => __('Display Tagline', 'blackoot'),
+			'desc'          => __('Display your site description (tagline) on the right side of the header.', 'blackoot'),
 			'id'            => 'header_tagline',
 			'type'          => 'radio',
 			'default'       => 'Off',
-			'values'		=> array ('Off', 'On'),
+			'values'		=> array (
+								array( 'value' => 'Off', 'display' => __('Off', 'blackoot') ),
+								array( 'value' => 'On', 'display' => __('On', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Blog Index Shows',
-			'desc'          => 'Choose what content to display on Main Blog page and archives',
+			'name'          => __('Blog Index Shows', 'blackoot'),
+			'desc'          => __('Choose what content to display on Main Blog page and archives', 'blackoot'),
 			'id'            => 'blog_index_shows',
 			'type'          => 'radio',
 			'default'       => 'Excerpt',
-			'values'		=> array ('Excerpt', 'Full content'),
+			'values'		=> array (
+								array( 'value' => 'Excerpt', 'display' => __('Excerpt', 'blackoot') ),
+								array( 'value' => 'Full content', 'display' => __('Full content', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
 			'name'          => __('Responsive mode', 'blackoot'),
-			'desc'          => 'Turn this setting off if you want your site to be unresponsive.',
+			'desc'          => __('Turn this setting off if you want your site to be unresponsive.', 'blackoot'),
 			'id'            => 'responsive_mode',
 			'type'          => 'radio',
 			'default'       => 'on',
-			'values'		=> array ('on', 'off'),
+			'values'		=> array (
+								array( 'value' => 'on', 'display' => __('On', 'blackoot') ),
+								array( 'value' => 'off', 'display' => __('Off', 'blackoot') ),
+								),
 		);
 
 	$settings_options[] = array('type' => 'end_menu');
 // END PAGE 1
 // START PAGE 2
 	$settings_options[] = array(
-		'name'          => 'Custom Header',
+		'name'          => __('Custom Header', 'blackoot'),
 		'type'          => 'start_menu',
 		'id'            => 'custom_header',
 		'icon'          => 'picture',
 	);
 
 		$settings_options[] = array(
-			'name'          => 'Display custom header on Homepage',
-			'desc'          => 'Enable or disable display of custom header image on the front page.',
+			'name'          => __('Display custom header on Homepage', 'blackoot'),
+			'desc'          => __('Enable or disable display of custom header image on the front page.', 'blackoot'),
 			'id'            => 'home_header_image',
 			'type'          => 'radio',
 			'default'       => 'On',
-			'values'		=> array ('On', 'Off'),			
+			'values'		=> array (
+								array( 'value' => 'On', 'display' => __('On', 'blackoot') ),
+								array( 'value' => 'Off', 'display' => __('Off', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Display custom header on Blog Index',
-			'desc'          => 'Enable or disable display of custom header image on blog index pages.',
+			'name'          => __('Display custom header on Blog Index', 'blackoot'),
+			'desc'          => __('Enable or disable display of custom header image on blog index pages.', 'blackoot'),
 			'id'            => 'blog_header_image',
 			'type'          => 'radio',
 			'default'       => 'On',
-			'values'		=> array ('On', 'Off'),			
+			'values'		=> array (
+								array( 'value' => 'On', 'display' => __('On', 'blackoot') ),
+								array( 'value' => 'Off', 'display' => __('Off', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Display custom header on Blog Posts',
-			'desc'          => 'Enable or disable display of custom header image on single blog posts',
+			'name'          => __('Display custom header on Blog Posts', 'blackoot'),
+			'desc'          => __('Enable or disable display of custom header image on single blog posts', 'blackoot'),
 			'id'            => 'single_header_image',
 			'type'          => 'radio',
 			'default'       => 'On',
-			'values'		=> array ('On', 'Off'),			
+			'values'		=> array (
+								array( 'value' => 'On', 'display' => __('On', 'blackoot') ),
+								array( 'value' => 'Off', 'display' => __('Off', 'blackoot') ),
+								),
 		);
 
 		$settings_options[] = array(
-			'name'          => 'Display custom header on Pages',
-			'desc'          => 'Enable or disable display of custom header image on individual pages.',
+			'name'          => __('Display custom header on Pages', 'blackoot'),
+			'desc'          => __('Enable or disable display of custom header image on individual pages.', 'blackoot'),
 			'id'            => 'pages_header_image',
 			'type'          => 'radio',
 			'default'       => 'On',
-			'values'		=> array ('On', 'Off'),			
+			'values'		=> array (
+								array( 'value' => 'On', 'display' => __('On', 'blackoot') ),
+								array( 'value' => 'Off', 'display' => __('Off', 'blackoot') ),
+								),
 		);
 
 
@@ -153,14 +178,14 @@ function blackoot_settings_template() {
 // END PAGE 2
 // START PAGE 3
 	$settings_options[] = array(
-		'name'          => 'Support and Feedback',
+		'name'          => __('Support and Feedback', 'blackoot'),
 		'type'          => 'start_menu',
 		'id'            => 'support_feedback',
 		'icon'          => 'network',
 	);
 
 		$settings_options[] = array(
-			'name'          => 'Support and Feedback',
+			'name'          => __('Support and Feedback', 'blackoot'),
 			'desc'          => '',
 			'id'            => 'support_feedback',
 			'type'          => 'support_feedback',

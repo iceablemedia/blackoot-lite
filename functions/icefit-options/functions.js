@@ -2,7 +2,7 @@
  *
  * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2014-2015 Mathieu Sarrasin - Iceable Media
  *
  * Admin Settings Panel JS
  *
@@ -48,13 +48,13 @@ var blackoot_admin_panel;
 				blackoot_settings_nonce: jQuery('#blackoot_settings_nonce').val()
 			};
 			jQuery.post(ajaxurl, data);
-			jQuery('#ajax-result').html('Settings saved.').fadeIn("normal").delay('1000').fadeOut("normal");
+			jQuery('#ajax-result').html(blackoot_js_strings.settings_saved).fadeIn("normal").delay('1000').fadeOut("normal");
 			return false; 
 		});
 		
 		// Reset
 		jQuery('#icefit-reset-button').click(function() {
-			var answer = confirm("Are you sure you want to reset ALL settings for this theme to default values ?");
+			var answer = confirm(blackoot_js_strings.reset_confirm);
 			if (answer) {
 				var data = { action: 'blackoot_settings_reset_ajax_post_action' };
 				jQuery.post(ajaxurl, data);

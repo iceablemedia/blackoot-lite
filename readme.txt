@@ -1,5 +1,5 @@
 Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
-Copyright 2014 Mathieu Sarrasin - Iceable Media
+Copyright 2014-2015 Mathieu Sarrasin - Iceable Media
 Changelog
 
 
@@ -63,6 +63,13 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.0.4 =
+February 2nd, 2015
+* Fixed: made all text strings translatable in front-end and back-end.
+* Updated POT file
+* Updated fr_FR translation
+* Updated copyright date to 2015
 
 = 1.0.3 =
 October 29th, 2014
