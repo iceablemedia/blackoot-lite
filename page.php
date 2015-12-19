@@ -28,7 +28,7 @@ get_template_part( 'part-title' );
 
 				the_content();
 				$blackoot_link_pages_args = array(
-						'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __('Pages:', 'blackoot') . '</span>',
+						'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __('Pages:', 'blackoot-lite') . '</span>',
 						'after'            => '</div>',
 						'link_before'      => '<span>',
 						'link_after'       => '</span>',
@@ -38,25 +38,25 @@ get_template_part( 'part-title' );
 					);
 					wp_link_pages( $blackoot_link_pages_args );
 				?><br class="clear" /><?php
-				edit_post_link(__('Edit', 'blackoot'), '<div class="postmetadata"><span class="editlink"><i class="fa fa-pencil"></i>', '</span></div>');
+				edit_post_link(__('Edit', 'blackoot-lite'), '<div class="postmetadata"><span class="editlink"><i class="fa fa-pencil"></i>', '</span></div>');
 
 				// Display comments section only if comments are open or if there are comments already.
 				if ( comments_open() || get_comments_number()!=0 ):
-					?><div class="comments"><?php 
+					?><div class="comments"><?php
 					comments_template( '', true );
 					next_comments_link(); previous_comments_link();
 					?></div><?php
 				endif;
-				
+
 	endwhile;
-	
+
 	else: // Empty loop (this should never happen!)
 
-		?><h2><?php _e('Not Found', 'blackoot'); ?></h2><?php
-		?><p><?php _e('What you are looking for isn\'t here...', 'blackoot'); ?></p><?php
+		?><h2><?php _e('Not Found', 'blackoot-lite'); ?></h2><?php
+		?><p><?php _e('What you are looking for isn\'t here...', 'blackoot-lite'); ?></p><?php
 
 	endif;
-	
+
 	?></div><?php // End page container
 
 	?><div id="sidebar-container"><?php

@@ -64,6 +64,13 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.2 =
+November 4th, 2015
+* Fixed footer menu alignment
+* Disabled the "favicon" theme setting for WordPress 4.3+ (no longer useful since WP 4.3+ includes wp_site_icon)
+* Enhanced screen-reader-text CSS support, based on a post by Joe Dolson on make.wordpress.org
+* Changed textdomain to theme slug: 'blackoot-lite'
+
 = 1.1.1 =
 August 31th, 2015
 * Added screen-reader-text CSS support

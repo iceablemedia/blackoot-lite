@@ -15,26 +15,34 @@ class Blackoot_Customizer {
 		// Move default settings "background_color" in the same section as background image settings
 		// and rename the section just "Background"
 		$wp_customize->get_control( 'background_color' )->section = 'background_image';
-		$wp_customize->get_section( 'background_image' )->title = __('Background', 'blackoot');
+		$wp_customize->get_section( 'background_image' )->title = __('Background', 'blackoot-lite');
 
 		// Add new sections
+		if ( ! function_exists('wp_site_icon') ) :
 		$wp_customize->add_section( 'blackoot_logo_favicon' , array(
-			'title'      => __( 'Logo & Favicon', 'blackoot' ),
+			'title'      => __( 'Logo & Favicon', 'blackoot-lite' ),
 			'priority'   => 20,
 		) );
+		else:
+		$wp_customize->add_section( 'blackoot_logo_favicon' , array(
+			'title'      => __( 'Logo', 'blackoot-lite' ),
+			'priority'   => 20,
+		) );
+		endif;
+
 
 		$wp_customize->add_section( 'blackoot_blog_settings' , array(
-			'title'      => __( 'Blog Settings', 'blackoot' ),
+			'title'      => __( 'Blog Settings', 'blackoot-lite' ),
 			'priority'   => 80,
 		) );
 
 		$wp_customize->add_section( 'blackoot_misc_settings' , array(
-			'title'      => __( 'Misc', 'blackoot' ),
+			'title'      => __( 'Misc', 'blackoot-lite' ),
 			'priority'   => 100,
 		) );
 
 		$wp_customize->add_section( 'blackoot_more' , array(
-			'title'      => __( 'More', 'blackoot' ),
+			'title'      => __( 'More', 'blackoot-lite' ),
 			'priority'   => 130,
 		) );
 
@@ -46,8 +54,8 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control( $wp_customize, 'blackoot_logo',
 				array(
-					'label'      => __( 'Upload your logo', 'blackoot' ),
-					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'blackoot'),
+					'label'      => __( 'Upload your logo', 'blackoot-lite' ),
+					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'blackoot-lite'),
 					'section'    => 'blackoot_logo_favicon',
 					'settings'   => 'blackoot_logo',
 				)
@@ -55,20 +63,22 @@ class Blackoot_Customizer {
 		);
 
 		// Setting and control for favicon
-		$wp_customize->add_setting( 'blackoot_favicon' , array(
-			'default'     => '',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control( $wp_customize, 'blackoot_favicon',
-				array(
-					'label'			=> __( 'Upload a custom favicon', 'blackoot' ),
-					'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'blackoot'),
-					'section'		=> 'blackoot_logo_favicon',
-					'settings'		=> 'blackoot_favicon',
+		if ( ! function_exists('wp_site_icon') ) :
+			$wp_customize->add_setting( 'blackoot_favicon' , array(
+				'default'     => '',
+				'sanitize_callback' => 'esc_url_raw',
+			) );
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control( $wp_customize, 'blackoot_favicon',
+					array(
+						'label'			=> __( 'Upload a custom favicon', 'blackoot-lite' ),
+						'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'blackoot-lite'),
+						'section'		=> 'blackoot_logo_favicon',
+						'settings'		=> 'blackoot_favicon',
+					)
 				)
-			)
-		);
+			);
+		endif;
 
 		// Setting and control for blog index content switch
 		$wp_customize->add_setting( 'blackoot_blog_index_content' , array(
@@ -78,13 +88,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'blackoot_blog_index_content',
 				array(
-					'label'		=> __( 'Blog Index Content', 'blackoot' ),
+					'label'		=> __( 'Blog Index Content', 'blackoot-lite' ),
 					'section'	=> 'blackoot_blog_settings',
 					'settings'	=> 'blackoot_blog_index_content',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'excerpt'	=> __( 'Excerpt', 'blackoot' ),
-						'content'	=> __( 'Full content', 'blackoot' )
+						'excerpt'	=> __( 'Excerpt', 'blackoot-lite' ),
+						'content'	=> __( 'Full content', 'blackoot-lite' )
 					)
 				)
 			)
@@ -98,13 +108,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'blackoot_responsive_mode',
 				array(
-					'label'		=> __( 'Responsive Mode', 'blackoot' ),
+					'label'		=> __( 'Responsive Mode', 'blackoot-lite' ),
 					'section'	=> 'blackoot_misc_settings',
 					'settings'	=> 'blackoot_responsive_mode',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'blackoot' ),
-						'off'	=> __( 'Off', 'blackoot' )
+						'on'	=> __( 'On', 'blackoot-lite' ),
+						'off'	=> __( 'Off', 'blackoot-lite' )
 					)
 				)
 			)
@@ -118,13 +128,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'home_header_image',
 				array(
-					'label'		=> __( 'Display header on Homepage', 'blackoot' ),
+					'label'		=> __( 'Display header on Homepage', 'blackoot-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'home_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'blackoot' ),
-						'off'	=> __( 'Off', 'blackoot' )
+						'on'	=> __( 'On', 'blackoot-lite' ),
+						'off'	=> __( 'Off', 'blackoot-lite' )
 					)
 				)
 			)
@@ -137,13 +147,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'blog_header_image',
 				array(
-					'label'		=> __( 'Display header on Blog Index', 'blackoot' ),
+					'label'		=> __( 'Display header on Blog Index', 'blackoot-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'blog_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'blackoot' ),
-						'off'	=> __( 'Off', 'blackoot' )
+						'on'	=> __( 'On', 'blackoot-lite' ),
+						'off'	=> __( 'Off', 'blackoot-lite' )
 					)
 				)
 			)
@@ -156,13 +166,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'single_header_image',
 				array(
-					'label'		=> __( 'Display header on Single Posts', 'blackoot' ),
+					'label'		=> __( 'Display header on Single Posts', 'blackoot-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'single_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'blackoot' ),
-						'off'	=> __( 'Off', 'blackoot' )
+						'on'	=> __( 'On', 'blackoot-lite' ),
+						'off'	=> __( 'Off', 'blackoot-lite' )
 					)
 				)
 			)
@@ -175,13 +185,13 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'pages_header_image',
 				array(
-					'label'		=> __( 'Display header on Pages', 'blackoot' ),
+					'label'		=> __( 'Display header on Pages', 'blackoot-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'pages_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'blackoot' ),
-						'off'	=> __( 'Off', 'blackoot' )
+						'on'	=> __( 'On', 'blackoot-lite' ),
+						'off'	=> __( 'Off', 'blackoot-lite' )
 					)
 				)
 			)
@@ -195,8 +205,8 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new Blackoot_Button_Customize_Control( $wp_customize, 'blackoot_upgrade',
 				array(
-					'label'			=> __( 'Get Blackoot Pro', 'blackoot' ),
-					'description'	=> __( 'Unleash the full potential of Blackoot with tons of additional settings, advanced features and premium support.', 'blackoot'),
+					'label'			=> __( 'Get Blackoot Pro', 'blackoot-lite' ),
+					'description'	=> __( 'Unleash the full potential of Blackoot with tons of additional settings, advanced features and premium support.', 'blackoot-lite'),
 					'section'		=> 'blackoot_more',
 					'settings'		=> 'blackoot_upgrade',
 					'type'			=> 'button',
@@ -212,8 +222,8 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new Blackoot_Button_Customize_Control( $wp_customize, 'blackoot_support',
 				array(
-					'label'			=> __( 'Blackoot Lite support forums', 'blackoot' ),
-					'description'	=> __( 'Have a question? Need help?', 'blackoot'),
+					'label'			=> __( 'Blackoot Lite support forums', 'blackoot-lite' ),
+					'description'	=> __( 'Have a question? Need help?', 'blackoot-lite'),
 					'section'		=> 'blackoot_more',
 					'settings'		=> 'blackoot_support',
 					'type'			=> 'button',
@@ -229,8 +239,8 @@ class Blackoot_Customizer {
 		$wp_customize->add_control(
 			new Blackoot_Button_Customize_Control( $wp_customize, 'blackoot_feedback',
 				array(
-					'label'			=> __( 'Rate Blackoot Lite', 'blackoot' ),
-					'description'	=> __( 'Like this theme? We\'d love to hear your feedback!', 'blackoot'),
+					'label'			=> __( 'Rate Blackoot Lite', 'blackoot-lite' ),
+					'description'	=> __( 'Like this theme? We\'d love to hear your feedback!', 'blackoot-lite'),
 					'section'		=> 'blackoot_more',
 					'settings'		=> 'blackoot_feedback',
 					'type'			=> 'button',
@@ -247,7 +257,7 @@ class Blackoot_Customizer {
 			array( 'customize-controls' )
 		);
 
-		wp_register_script( 
+		wp_register_script(
 			  'blackoot-customizer-section',
 			  get_template_directory_uri() . '/inc/customizer/js/blackoot-customizer-section.js',
 			  array( 'jquery','jquery-ui-core','jquery-ui-button','customize-controls' ),
@@ -255,7 +265,7 @@ class Blackoot_Customizer {
 			  true
 		);
 		$blackoot_customizer_section_l10n = array(
-			'upgrade_pro' => __( 'Upgrade to Blackoot Pro!', 'blackoot' ),
+			'upgrade_pro' => __( 'Upgrade to Blackoot Pro!', 'blackoot-lite' ),
 		);
 		wp_localize_script( 'blackoot-customizer-section', 'blackoot_customizer_section_l10n', $blackoot_customizer_section_l10n );
 		wp_enqueue_script( 'blackoot-customizer-section' );
@@ -299,7 +309,7 @@ function blackoot_sanitize_on_off( $input ){
 }
 
 function blackoot_sanitize_button( $input ){
-	return '';	
+	return '';
 }
 
 ?>

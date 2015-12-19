@@ -262,12 +262,21 @@ figure figcaption,
 .gallery-item img { padding: 0 5px; box-sizing: border-box; -moz-box-sizing: border-box; }
 
 .screen-reader-text {
-	font-size: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
 .screen-reader-text:focus {
-	font-size: 14px;
-	z-index: 100000; /* Above WP toolbar. */
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 /* #Base Grid */
@@ -1063,21 +1072,11 @@ p.comment-form-url
 	position: relative;
 }
 
-#searchform #s {
-	width: 100%;
-	margin-bottom: 5px;
-	margin-top: 5px;
-	box-sizing: border-box;
-}
-
-#searchform label {
+#searchform div:after {
 	position: absolute;
-	top: 3px;
+	top: 8px;
 	right: 8px;
 	color: #FFF;
-	line-height: 30px;
-}
-#searchform label:after {
 	display: inline-block;
 	font-family: FontAwesome;
 	font-size: 12px;
@@ -1086,6 +1085,13 @@ p.comment-form-url
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	content: "\f002";
+}
+
+#searchform #s {
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	box-sizing: border-box;
 }
 
 #searchform #searchsubmit {
@@ -1249,6 +1255,10 @@ p.comment-form-url
 	display: inline-block;
 	padding: 0 10px;
 	width: 50%;
+}
+
+.sub-footer-right {
+	text-align: right;
 }
 
 #sub-footer .menu,

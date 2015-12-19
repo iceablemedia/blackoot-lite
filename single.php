@@ -9,7 +9,7 @@
  *
  */
 
-get_header(); 
+get_header();
 get_template_part( 'part-title' );
 
 ?><div class="container" id="main-content"><?php
@@ -23,7 +23,7 @@ get_template_part( 'part-title' );
 
 		/* Post Metadata */
 		?><div class="postmetadata"><?php
-	
+
 		/* Meta: Date */
 			?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php
 				the_time( get_option( 'date_format' ) ); ?>
@@ -32,32 +32,32 @@ get_template_part( 'part-title' );
 		/* Meta: Author */
 			$author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>',
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'blackoot' ), get_the_author() ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'blackoot-lite' ), get_the_author() ) ),
 				get_the_author() );
 			?><span class="meta-author author vcard"><i class="fa fa-user"></i><?php echo $author; ?></span><?php
-	
+
 		/* Meta: Category */
-			?><div class="meta-category"><span class="category-icon" title="<?php _e('Category', 'blackoot'); ?>"><i class="fa fa-tag"></i></span><?php
+			?><div class="meta-category"><span class="category-icon" title="<?php _e('Category', 'blackoot-lite'); ?>"><i class="fa fa-tag"></i></span><?php
 				foreach((get_the_category()) as $category):
 					echo '<a href="', get_category_link($category->term_id ), '">', $category->cat_name, '</a>';
 				endforeach;
 			?></div><?php
-	
+
 		/* Meta: Comments */
 		if ( ( comments_open() || get_comments_number()!=0 ) ):
-		?><span class="meta-comments"><i class="fa fa-comment"></i><?php 
-			comments_popup_link( __( '0 Comment', 'blackoot' ), __( '1 Comment', 'blackoot' ), __( '% Comments', 'blackoot' ), '', __('Comments Off', 'blackoot') );
+		?><span class="meta-comments"><i class="fa fa-comment"></i><?php
+			comments_popup_link( __( '0 Comment', 'blackoot-lite' ), __( '1 Comment', 'blackoot-lite' ), __( '% Comments', 'blackoot-lite' ), '', __('Comments Off', 'blackoot-lite') );
 		?></span><?php
 		endif;
-	
+
 		/* Meta: Tags */
 		if ( has_tag() ):
 			the_tags('<div class="meta-tags"><span class="tags-icon"><i class="fa fa-tags"></i></span>', '', '</div>');
 		endif;
-	
+
 		/* Edit link (only for logged in users allowed to edit post) */
-		edit_post_link(__('Edit', 'blackoot'), '<span class="editlink"><i class="fa fa-pencil"></i>', '</span>');
-	
+		edit_post_link(__('Edit', 'blackoot-lite'), '<span class="editlink"><i class="fa fa-pencil"></i>', '</span>');
+
 		?></div><?php // End metadata
 
 		/* Post thumbnail (Featured Image) */
@@ -72,13 +72,13 @@ get_template_part( 'part-title' );
 			the_content();
 			?><div class="clear"></div><?php
 			$args = array(
-				'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __('Pages:', 'blackoot') . '</span>',
+				'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __('Pages:', 'blackoot-lite') . '</span>',
 				'after'            => '</div>',
 				'link_before'      => '<span>',
 				'link_after'       => '</span>',
 				'next_or_number'   => 'number',
-				'nextpagelink'     => __('Next page', 'blackoot'),
-				'previouspagelink' => __('Previous page', 'blackoot'),
+				'nextpagelink'     => __('Next page', 'blackoot-lite'),
+				'previouspagelink' => __('Previous page', 'blackoot-lite'),
 				'pagelink'         => '%',
 				'echo'             => 1
 			);
@@ -93,7 +93,7 @@ get_template_part( 'part-title' );
 			?><hr /><div class="comments"><?php
 				comments_template( '', true );
 			?></div><?php // end comment section
-		
+
 			blackoot_article_nav();
 		endif;
 
@@ -101,11 +101,11 @@ get_template_part( 'part-title' );
 
 	else: // Empty loop (this should never happen!)
 
-		?><h2><?php _e('Not Found', 'blackoot'); ?></h2>
-		<p><?php _e('What you are looking for isn\'t here...', 'blackoot'); ?></p><?php
+		?><h2><?php _e('Not Found', 'blackoot-lite'); ?></h2>
+		<p><?php _e('What you are looking for isn\'t here...', 'blackoot-lite'); ?></p><?php
 
 	endif;
-	
+
 	?></div><?php // End page container
 
 		?><div id="sidebar-container"><?php

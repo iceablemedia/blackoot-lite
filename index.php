@@ -14,10 +14,10 @@ get_header();
 get_template_part( 'part-title' );
 
 ?><div id="main-content" class="container"><?php
-	
+
 ?><div id="page-container" class="with-sidebar"><?php
 
-		if(have_posts()): 
+		if(have_posts()):
 		while(have_posts()) : the_post();
 
 ?><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><?php
@@ -46,12 +46,12 @@ get_template_part( 'part-title' );
 		/* Meta: Author */
 		$author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'blackoot' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'blackoot-lite' ), get_the_author() ) ),
 			get_the_author() );
 		?><span class="meta-author author vcard"><i class="fa fa-user"></i><?php echo $author; ?></span><?php
-	
+
 		/* Meta: Category */
-		?><div class="meta-category"><span class="category-icon" title="<?php _e('Category', 'blackoot'); ?>"><i class="fa fa-tag"></i></span><?php
+		?><div class="meta-category"><span class="category-icon" title="<?php _e('Category', 'blackoot-lite'); ?>"><i class="fa fa-tag"></i></span><?php
 			foreach((get_the_category()) as $category):
 				echo '<a href="', get_category_link($category->term_id ), '">', $category->cat_name, '</a>';
 			endforeach;
@@ -61,8 +61,8 @@ get_template_part( 'part-title' );
 
 	/* Meta: Comments */
 	if ( ( comments_open() || get_comments_number()!=0 ) ):
-	?><span class="meta-comments"><i class="fa fa-comment"></i><?php 
-		comments_popup_link( __( '0 Comment', 'blackoot' ), __( '1 Comment', 'blackoot' ), __( '% Comments', 'blackoot' ), '', __('Comments Off', 'blackoot') );
+	?><span class="meta-comments"><i class="fa fa-comment"></i><?php
+		comments_popup_link( __( '0 Comment', 'blackoot-lite' ), __( '1 Comment', 'blackoot-lite' ), __( '% Comments', 'blackoot-lite' ), '', __('Comments Off', 'blackoot-lite') );
 	?></span><?php
 	endif;
 
@@ -72,7 +72,7 @@ get_template_part( 'part-title' );
 	endif;
 
 	/* Edit link (only for logged in users allowed to edit post) */
-	edit_post_link(__('Edit', 'blackoot'), '<span class="editlink"><i class="fa fa-pencil"></i>', '</span>');
+	edit_post_link(__('Edit', 'blackoot-lite'), '<span class="editlink"><i class="fa fa-pencil"></i>', '</span>');
 
 	 ?></div><?php // End metadata
 
@@ -84,36 +84,36 @@ get_template_part( 'part-title' );
 		?></div><?php
 
 		?></div><?php // end div post
-		
+
 		?><hr /><?php
 
 		endwhile;
-		
+
 		else: // If there is no post in the loop
-		
+
 			if ( is_search() ): // Empty search results
 
-			?><h2><?php _e('Not Found', 'blackoot'); ?></h2><?php
-			?><p><?php echo sprintf( __('Your search for "%s" did not return any result.', 'blackoot'), get_search_query() ); ?><br /><?php
-			_e('Would you like to try another search ?', 'blackoot'); ?></p><?php
+			?><h2><?php _e('Not Found', 'blackoot-lite'); ?></h2><?php
+			?><p><?php echo sprintf( __('Your search for "%s" did not return any result.', 'blackoot-lite'), get_search_query() ); ?><br /><?php
+			_e('Would you like to try another search ?', 'blackoot-lite'); ?></p><?php
 			get_search_form();
 
 			else: // Empty loop (this should never happen!)
 
-			?><h2><?php _e('Not Found', 'blackoot'); ?></h2><?php
-			?><p><?php _e('What you are looking for isn\'t here...', 'blackoot'); ?></p><?php
+			?><h2><?php _e('Not Found', 'blackoot-lite'); ?></h2><?php
+			?><p><?php _e('What you are looking for isn\'t here...', 'blackoot-lite'); ?></p><?php
 
 			endif;
 
 		endif;
 
 		?><div class="page_nav"><?php
-		
+
 		if ( null != get_next_posts_link() ):
-			?><div class="previous navbutton"><?php next_posts_link( '<i class="fa fa-angle-double-left"></i>' . __('Previous Posts', 'blackoot') ); ?></div><?php
+			?><div class="previous navbutton"><?php next_posts_link( '<i class="fa fa-angle-double-left"></i>' . __('Previous Posts', 'blackoot-lite') ); ?></div><?php
 			endif;
 			if ( null != get_previous_posts_link() ):
-			?><div class="next navbutton"><?php previous_posts_link( __('Next Posts', 'blackoot') . '<i class="fa fa-angle-double-right"></i>' ); ?></div><?php
+			?><div class="next navbutton"><?php previous_posts_link( __('Next Posts', 'blackoot-lite') . '<i class="fa fa-angle-double-right"></i>' ); ?></div><?php
 			endif;
 		?></div><?php
 
