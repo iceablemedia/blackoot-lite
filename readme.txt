@@ -64,6 +64,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.6 =
+February 9th, 2015
+* Fixed a small glitch in footer.php (extra php tag that caused a php syntax error)
+
 = 1.0.5 =
 February 6th, 2015
 * Removed analytics tagging on external links in Theme Options

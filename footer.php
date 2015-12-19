@@ -33,7 +33,7 @@
 		esc_attr( 'Iceablethemes', 'blackoot' ) 
 	);
 
-<?php /* Stop editing here */
+/* Stop editing here */
 
 		?></p></div><?php
 
