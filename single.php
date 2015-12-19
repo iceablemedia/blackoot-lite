@@ -10,7 +10,7 @@
  */
 
 get_header(); 
-get_template_part( 'page-title' );
+get_template_part( 'part-title' );
 
 ?><div class="container" id="main-content"><?php
 

@@ -112,34 +112,6 @@ function blackoot_add_menu_parent_class( $items ) {
 add_filter( 'wp_nav_menu_objects', 'blackoot_add_menu_parent_class' );
 
 /*
- * The automatically generated fallback menu is not responsive.
- * Add an admin notice to warn users who did not set a primary menu
- * and make this notice dismissable so it is less intrusive.
- */
-
-function blackoot_admin_notice(){
-	global $current_user;
-	$user_id = $current_user->ID;
-	/* Display notice if primary menu is not set and user did not dismiss the notice */
-    if  ( !has_nav_menu( 'primary' ) && !get_user_meta($user_id, 'blackoot_ignore_notice' ) ):
-	    echo '<div class="updated"><p><strong>Blackoot Lite Notice:</strong> you have not set your primary menu yet, and your site is currently using a fallback menu which is not responsive. Please take a minute to <a href="'.admin_url('nav-menus.php').'">set your menu now</a>!';
-	    printf(__('<a href="%1$s" style="float:right">Dismiss</a>'), '?blackoot_notice_ignore=0');
-	    echo '</p></div>';
-    endif;
-}
-add_action('admin_notices', 'blackoot_admin_notice');
-
-function blackoot_notice_ignore() {
-	global $current_user;
-	$user_id = $current_user->ID;
-	/* If user clicks to ignore the notice, add that to their user meta */
-	if ( isset($_GET['blackoot_notice_ignore']) && '0' == $_GET['blackoot_notice_ignore'] ):		
-		add_user_meta($user_id, 'blackoot_ignore_notice', true, true);
-	endif;
-}
-add_action('admin_init', 'blackoot_notice_ignore');
-
-/*
  * Register Sidebar and Footer widgetized areas
  */
 function blackoot_widgets_init() {
@@ -188,13 +160,13 @@ function blackoot_styles() {
 		wp_register_style( 'blackoot', $template_directory_uri . $stylesheet );
 
 	// Always enqueue style.css from the current theme
-	wp_register_style( 'style', $stylesheet_directory_uri . '/style.css');
+	wp_register_style( 'blackoot-style', $stylesheet_directory_uri . '/style.css');
 
 	wp_enqueue_style( 'blackoot' );
-	wp_enqueue_style( 'style' );
+	wp_enqueue_style( 'blackoot-style' );
 
 	// Load font-awesome
-	wp_enqueue_style( 'font-awesome', "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", array(), null );
+	wp_enqueue_style( 'font-awesome', $template_directory_uri . "/css/font-awesome/css/font-awesome.min.css" );
 
 	// Google Webfonts
 	wp_enqueue_style( 'Quicksand-webfonts', "//fonts.googleapis.com/css?family=Quicksand:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
@@ -214,7 +186,7 @@ add_action( 'init', 'blackoot_editor_styles' );
  * Enqueue javascripts
  */
 function blackoot_scripts() {
-	wp_enqueue_script('blackoot', get_template_directory_uri() . '/js/blackoot.min.js', array('jquery'));
+	wp_enqueue_script('blackoot', get_template_directory_uri() . '/js/blackoot.min.js', array('jquery','hoverIntent'));
 	/* Threaded comments support */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
@@ -230,41 +202,6 @@ function blackoot_remove_rel_cat( $text ) {
 	return $text;
 }
 add_filter( 'the_category', 'blackoot_remove_rel_cat' ); 
-
-/*
- * Fix for a known issue with enclosing shortcodes and wpautop
- * (wpautop tends to add empty <p> or <br> tags before and/or after enclosing shortcodes)
- * Thanks to Johann Heyne
- */
-function blackoot_shortcode_empty_paragraph_fix($content) {
-	$array = array (
-		'<p>['    => '[', 
-		']</p>'   => ']', 
-		']<br />' => ']',
-	);
-	$content = strtr($content, $array);
-	return $content;
-}
-add_filter('the_content', 'blackoot_shortcode_empty_paragraph_fix');
-
-/*
- * Improved version of clean_pre
- * Based on a work by Emrah Gunduz
- */
-function blackoot_protect_pre($pee) {
-	$pee = preg_replace_callback('!(<pre[^>]*>)(.*?)</pre>!is', 'blackoot_eg_clean_pre', $pee );
-	return $pee;
-}
-
-function blackoot_eg_clean_pre($matches) {
-	if ( is_array($matches) )
-		$text = $matches[1] . $matches[2] . "</pre>";
-	else
-		$text = $matches;
-	$text = str_replace('<br />', '', $text);
-	return $text;
-}
-add_filter( 'the_content', 'blackoot_protect_pre' );
 
 /*
  * Customize "read more" links on index view
@@ -412,35 +349,29 @@ function blackoot_breadcrumbs() {
 
 	if (!is_front_page()):
 	
-		echo '<a href="', home_url(), '">', __('Home', 'blackoot'), '</a><span class="separator"> ', $sep, ' </span>';
+		echo '<a href="', esc_url(home_url()), '">', __('Home', 'blackoot'), '</a><span class="separator"> ', $sep, ' </span>';
 
 		if (is_home()):
 
 			$page_for_posts = get_option('page_for_posts');
-			echo get_the_title($page_for_posts);
+			echo wp_kses(get_the_title($page_for_posts), array());
 
 		elseif (is_single()):
 
-			if ( "icf_portfolio" == get_post_type() ):
-				// Use portfolio page's slug (capitalized) for single portfolio entries
-				echo ucfirst( $blackoot_options['portfolio_entries_slug'] );
-			else:
-				// Use categories as breadcrumbs for single posts
-				the_category('<span class="separator"> '.$sep.' </span>');
-			endif;
-
-				echo '<span class="separator"> '.$sep.' </span>', get_the_title();
+			// Use categories as breadcrumbs for single posts
+			the_category('<span class="separator"> '.$sep.' </span>');
+			echo '<span class="separator"> '.$sep.' </span>', wp_kses(get_the_title(), array());
 
 		elseif (is_page()):
 			if($post->post_parent):
 				$anc = get_post_ancestors( $post->ID );
 				$output = '';
 				foreach ( $anc as $ancestor ):
-					$output = '<a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a><span class="separator"> '.$sep.' </span>' . $output;
+					$output = '<a href="'.esc_url(get_permalink($ancestor)).'" title="'.wp_kses(get_the_title($ancestor), array()).'">'.wp_kses(get_the_title($ancestor), array()).'</a><span class="separator"> '.$sep.' </span>' . $output;
 				endforeach;
 				echo $output;
 			endif;
-			the_title();
+			echo wp_kses(get_the_title(), array());
 
 		elseif (is_category()): single_cat_title();
 		elseif (is_tag()): single_tag_title();

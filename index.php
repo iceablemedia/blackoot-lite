@@ -11,7 +11,7 @@
 
 get_header();
 
-	get_template_part( 'page-title' );
+	get_template_part( 'part-title' );
 
 
 ?><div id="main-content" class="container"><?php

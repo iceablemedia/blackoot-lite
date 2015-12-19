@@ -82,11 +82,11 @@ function blackoot_settings_machine($options) {
 		{
 			$output .= '<h3>'. $arg['name'] .'</h3>'."\n";
 			if ( $val == "" && $arg['default'] != "") $blackoot_settings[$arg['id']] = $val = $arg['default'];
-			$output .= '<input class="blackoot_input_img" name="'. $arg['id'] .'" id="'. $arg['id'] .'" type="text" value="'. $val .'" />'."\n";
+			$output .= '<input class="blackoot_input_img" name="'. $arg['id'] .'" id="'. $arg['id'] .'" type="text" value="'. esc_url($val) .'" />'."\n";
 			$output .= '<br class="clear"><label>'. $arg['desc'] .'</label><br class="clear">'."\n";
 			$output .= '<input class="blackoot_upload_button" name="'. $arg['id'] .'_upload" id="'. $arg['id'] .'_upload" type="button" value="' . __('Upload Image', 'blackoot') . '">'."\n";
 			$output .= '<input class="blackoot_remove_button" name="'. $arg['id'] .'_remove" id="'. $arg['id'] .'_remove" type="button" value="Remove"><br />'."\n";
-			$output .= '<img class="blackoot_image_preview" id="'. $arg['id'] .'_preview" src="'.$val.'"><br class="clear">'."\n";
+			$output .= '<img class="blackoot_image_preview" id="'. $arg['id'] .'_preview" src="'.esc_url($val) .'"><br class="clear">'."\n";
 		}
 		elseif ( $arg['type'] == "gopro" )
 		{
@@ -177,20 +177,25 @@ function blackoot_settings_ajax_callback() {
 	check_ajax_referer('blackoot_settings_ajax_post_action','blackoot_settings_nonce');
 	// Get POST data
 	$data = $_POST['data'];
-	parse_str($data,$output);
+	parse_str($data,$input);
 	// Get current settings from the database
 	$blackoot_settings = get_option($blackoot_settings_slug);
 	// Get the settings template
 	$options = blackoot_settings_template();
-	// Updates all settings according to POST data
+
+	// Validate input and update all settings according to POST data
 	foreach($options as $option_array){
 
-		if ($option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu') {
+		if (isset($option_array['id']) && $option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu') {
 			$id = $option_array['id'];
-			if ($option_array['type'] == "text") {
-				$new_value = esc_textarea($output[$option_array['id']]);
-			} else {
-				$new_value = $output[$option_array['id']];		
+			if ($option_array['type'] == "radio" ) {
+				if ( in_array( $input[$option_array['id']], $option_array['values']) ) {
+					$new_value = $input[$option_array['id']];
+				} else {
+					$new_value = $option_array['default'];
+				}
+			} elseif ($option_array['type'] == "image") {
+				$new_value = esc_url_raw($input[$option_array['id']]);
 			}
 			$blackoot_settings[$id] = stripslashes($new_value);
 		}
@@ -214,15 +219,20 @@ function blackoot_settings_save_nojs() {
 	// Updates all settings according to POST data
 	foreach($options as $option_array){
 	
-		if ( isset($option_array['id']) && $option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu' ) {
+		if (isset($option_array['id']) && $option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu') {
 			$id = $option_array['id'];
-			if ($option_array['type'] == "text") {
-				$new_value = esc_textarea($_POST[$option_array['id']]);
-			} else {
-				$new_value = $_POST[$option_array['id']];
+			if ($option_array['type'] == "radio" ) {
+				if ( in_array( $_POST[$option_array['id']], $option_array['values']) ) {
+					$new_value = $_POST[$option_array['id']];
+				} else {
+					$new_value = $option_array['default'];
+				}
+			} elseif ($option_array['type'] == "image") {
+				$new_value = esc_url_raw($_POST[$option_array['id']]);
 			}
 			$blackoot_settings[$id] = stripslashes($new_value);
 		}
+
 	}
 
 	// Updates settings in the database
@@ -253,9 +263,15 @@ function blackoot_settings_page(){
 	<noscript><div id="no-js-warning" class="updated fade"><p><b>Warning:</b> Javascript is either disabled in your browser or broken in your WP installation.<br />
 	This is ok, but it is highly recommended to activate javascript for a better experience.<br />
 	If javascript is not blocked in your browser then this may be caused by a third party plugin.<br />
-	Make sure everything is up to date or try to deactivate some plugins.</p></div></noscript>
+	Make sure everything is up to date or try to deactivate some plugins.</p></div></noscript><?php
 
-	<div id="icefit-admin-panel" class="no-js">
+	/* The automatically generated fallback menu is not responsive.
+	 * Add a notice to warn users who did not set a primary menu. */
+	if ( !has_nav_menu( 'primary' ) ):
+	echo '<div class="update-nag"><p><strong>Blackoot Lite Notice:</strong> you have not set your primary menu yet, and your site is currently using a fallback menu which is not responsive. Please take a minute to <a href="'.admin_url('nav-menus.php').'">set your menu now</a>!</p></div>';
+    endif;
+
+	?><div id="icefit-admin-panel" class="no-js">
 		<form enctype="multipart/form-data" id="icefitform" method="POST">
 			<div id="icefit-admin-panel-header">
 				<div id="icon-options-general" class="icon32"><br></div>
