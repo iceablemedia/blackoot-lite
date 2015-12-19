@@ -354,24 +354,24 @@ function blackoot_breadcrumbs() {
 		if (is_home()):
 
 			$page_for_posts = get_option('page_for_posts');
-			echo wp_kses(get_the_title($page_for_posts), array());
+			echo get_the_title($page_for_posts);
 
 		elseif (is_single()):
 
 			// Use categories as breadcrumbs for single posts
 			the_category('<span class="separator"> '.$sep.' </span>');
-			echo '<span class="separator"> '.$sep.' </span>', wp_kses(get_the_title(), array());
+			echo '<span class="separator"> '.$sep.' </span>', get_the_title();
 
 		elseif (is_page()):
 			if($post->post_parent):
 				$anc = get_post_ancestors( $post->ID );
 				$output = '';
 				foreach ( $anc as $ancestor ):
-					$output = '<a href="'.esc_url(get_permalink($ancestor)).'" title="'.wp_kses(get_the_title($ancestor), array()).'">'.wp_kses(get_the_title($ancestor), array()).'</a><span class="separator"> '.$sep.' </span>' . $output;
+					$output = '<a href="'.esc_url(get_permalink($ancestor)).'" title="' . the_title_attribute( array( 'echo' => false, 'post' => $ancestor ) ).'">' . get_the_title($ancestor) . '</a><span class="separator"> '.$sep.' </span>' . $output;
 				endforeach;
 				echo $output;
 			endif;
-			echo wp_kses(get_the_title(), array());
+			the_title();
 
 		elseif (is_category()): single_cat_title();
 		elseif (is_tag()): single_tag_title();

@@ -25,7 +25,7 @@ get_template_part( 'part-title' );
 		?><div class="postmetadata"><?php
 	
 		/* Meta: Date */
-			?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php
+			?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php
 				the_time( get_option( 'date_format' ) ); ?>
 			</a></span><?php
 

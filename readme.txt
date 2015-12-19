@@ -64,6 +64,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.3 =
+October 29th, 2014
+* Appropriately use the_title_attribute() where applicable in blackoot_breadcrumbs(), index.php and single.php
+* Added an extra user permission check before saving theme options setting in the database
+
 = 1.0.2 =
 October 23th, 2014
 * Updated credits and license statement for more clarity

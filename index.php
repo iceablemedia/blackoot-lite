@@ -23,14 +23,14 @@ get_header();
 
 ?><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><?php
 
-	?><h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php
+	?><h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php
 		the_title();
 	?></a></h3><?php
 
 	/* Post thumbnail (Featured Image) */
 		if ( '' != get_the_post_thumbnail() ) : // As recommended from the WP codex, has_post_thumbnail() is not reliable
 		?><div class="thumbnail">
-		<a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php
+		<a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php
 		the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a></div><?php
 	endif;
 
@@ -40,7 +40,7 @@ get_header();
 	if ( get_post_type() == 'post' ):
 
 		/* Meta: Date */
-		?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php
+		?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php
 			the_time( get_option( 'date_format' ) ); ?>
 		</a></span><?php
 

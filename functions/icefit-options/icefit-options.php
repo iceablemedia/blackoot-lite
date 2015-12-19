@@ -154,6 +154,8 @@ function blackoot_settings_machine($options) {
 
 // Ajax callback function for the "reset" button (resets settings to default)
 function blackoot_settings_reset_ajax_callback() {
+	if ( ! current_user_can('edit_theme_options') )
+		wp_die(__('You do not have permission to edit theme options.', 'blackoot'));
 	global $blackoot_settings_slug;
 	// Get settings from the database
 	$blackoot_settings = get_option($blackoot_settings_slug);
@@ -172,6 +174,8 @@ add_action('wp_ajax_blackoot_settings_reset_ajax_post_action', 'blackoot_setting
 
 // AJAX callback function for the "Save changes" button (updates user's settings in the database)
 function blackoot_settings_ajax_callback() {
+	if ( ! current_user_can('edit_theme_options') )
+		wp_die(__('You do not have permission to edit theme options.', 'blackoot'));
 	global $blackoot_settings_slug;
 	// Check nonce
 	check_ajax_referer('blackoot_settings_ajax_post_action','blackoot_settings_nonce');
@@ -209,6 +213,8 @@ add_action('wp_ajax_blackoot_settings_ajax_post_action', 'blackoot_settings_ajax
 
 // NOJS fallback for the "Save changes" button
 function blackoot_settings_save_nojs() {
+	if ( ! current_user_can('edit_theme_options') )
+		wp_die(__('You do not have permission to edit theme options.', 'blackoot'));
 	global $blackoot_settings_slug;
 	// Get POST data
 	//	parse_str($_POST,$output);
