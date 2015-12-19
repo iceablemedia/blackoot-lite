@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Blackoot Lite 1.0.0\n"
+"POT-Creation-Date: 2014-09-10 09:18+0100\n"
+"PO-Revision-Date: 2014-09-10 09:18+0100\n"
+"Last-Translator: \n"
+"Language-Team: Iceable Themes\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Page Not Found"
+msgstr "Page Introuvable"
+
+#: ../404.php:20 ../index.php:105 ../page-full-width.php:56 ../page.php:56
+#: ../single.php:105
+msgid "What you are looking for isn't here..."
+msgstr "Ce que vous cherchiez n'est pas ici..."
+
+#: ../404.php:21
+msgid "Maybe a search will help ?"
+msgstr "Peut-être qu'une recherche vous aidera ?"
+
+#: ../comments.php:17
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Cet article est protégé par un mot de passe. Entrez le mot de passe pour "
+"voir les commentaires."
+
+#: ../comments.php:23
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Une réponse à %2$s"
+
+#: ../comments.php:34
+msgid "Older comments"
+msgstr "Commentaires précédents"
+
+#: ../comments.php:37
+msgid "Newer comments"
+msgstr "Commentaires suivants"
+
+#: ../comments.php:46
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: ../footer.php:24
+msgid "Proudly powered by"
+msgstr "Fièrement propulsé par"
+
+#: ../functions.php:80
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../functions.php:126
+#, php-format
+msgid "<a href=\"%1$s\" style=\"float:right\">Dismiss</a>"
+msgstr "<a href=\"%1$s\" style=\"float:right\">Masquer</a>"
+
+#: ../functions.php:147
+msgid "Default Sidebar"
+msgstr "Sidebar par défaut"
+
+#: ../functions.php:155
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ../functions.php:274
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: ../functions.php:348
+msgid "Next Post"
+msgstr "Articles suivants"
+
+#: ../functions.php:354
+msgid "Previous Post"
+msgstr "Articles précédents"
+
+#: ../functions.php:415
+msgid "Home"
+msgstr "Accueil"
+
+#: ../functions.php:447
+msgid "Daily Archives"
+msgstr "Archives journalières"
+
+#: ../functions.php:448
+msgid "Monthly Archives"
+msgstr "Archives Mensuelles"
+
+#: ../functions.php:449
+msgid "Yearly Archives"
+msgstr "Archives annuelles"
+
+#: ../functions.php:450
+msgid "Author Archives"
+msgstr "Archives de l'auteur"
+
+#: ../functions.php:451
+msgid "Blog Archives"
+msgstr "Archives du blog"
+
+#: ../functions.php:452
+msgid "Search Results"
+msgstr "Résultat de recherche"
+
+#: ../functions.php:453
+msgid "404 Error"
+msgstr "Erreur 404"
+
+#: ../index.php:50 ../single.php:35
+#, php-format
+msgid "View all posts by %s"
+msgstr "Voir tous les posts de %s"
+
+#: ../index.php:55 ../single.php:40
+msgid "Category"
+msgstr "Catégorie"
+
+#: ../index.php:66 ../single.php:49
+msgid "0 Comment"
+msgstr "0 Commentaire"
+
+#: ../index.php:66 ../single.php:49
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: ../index.php:66 ../single.php:49
+msgid "% Comments"
+msgstr "% Commentaires"
+
+#: ../index.php:66 ../single.php:49
+msgid "Comments Off"
+msgstr "Commentaires fermés"
+
+#: ../index.php:76 ../page-full-width.php:41 ../page.php:41 ../single.php:59
+msgid "Edit"
+msgstr "Editer"
+
+#: ../index.php:97 ../index.php:104 ../page-full-width.php:55 ../page.php:55
+#: ../single.php:104
+msgid "Not Found"
+msgstr "Introuvable"
+
+#: ../index.php:98
+#, php-format
+msgid "Your search for \"%s\" did not return any result."
+msgstr "Votre recherche de \"%s\" n'a retourné aucun résultat."
+
+#: ../index.php:99
+msgid "Would you like to try another search ?"
+msgstr "Voulez-vous essayer une nouvelle recherche ?"
+
+#: ../index.php:114
+msgid "Previous Posts"
+msgstr "Articles précédents"
+
+#: ../index.php:117
+msgid "Next Posts"
+msgstr "Articles suivants"
+
+#: ../page-full-width.php:31 ../page.php:31 ../single.php:75
+msgid "Pages:"
+msgstr "Pages :"
+
+#: ../page-title.php:22
+msgid "404: Page Not Found"
+msgstr "404: Page Introuvable"
+
+#: ../page-title.php:27
+#, php-format
+msgid "Search Results for \"%s\""
+msgstr "Résultat de recherche pour \"%s\""
+
+#: ../page-title.php:32
+#, php-format
+msgid "Tag: %s"
+msgstr "Tag : %s"
+
+#: ../page-title.php:37
+#, php-format
+msgid "Category: %s"
+msgstr "Catégorie : %s"
+
+#: ../page-title.php:42
+#, php-format
+msgid "Daily archives: %s"
+msgstr "Archives journalières : %s"
+
+#: ../page-title.php:46
+#, php-format
+msgid "Monthly archives: %s"
+msgstr "Archives mensuelles : %s"
+
+#: ../page-title.php:50
+#, php-format
+msgid "Yearly archives: %s"
+msgstr "Archives annuelles : %s"
+
+#: ../sidebar.php:16
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: ../sidebar.php:21
+msgid "Archives"
+msgstr "Archives"
+
+#: ../sidebar.php:26
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:80
+msgid "Next page"
+msgstr "Page précédente"
+
+#: ../single.php:81
+msgid "Previous page"
+msgstr "Page suivante"
+
+#: ../functions/icefit-options/icefit-options.php:26
+msgid "Theme Options"
+msgstr "Options du thème"
+
+#: ../functions/icefit-options/icefit-options.php:87
+msgid "Upload Image"
+msgstr "Télécharger une image"
+
+#: ../functions/icefit-options/settings.php:16
+msgid "Blackoot Lite Settings"
+msgstr "Configuration de Blackoot Lite"
+
+#: ../functions/icefit-options/settings.php:97
+msgid "Responsive mode"
+msgstr "Mode \"responsive\""
