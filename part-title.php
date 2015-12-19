@@ -51,14 +51,11 @@ else:
 	endif;
 	
 	/* DEFAULT BLOG INDEX TITLE */
-	if ( is_home() ):
-		$show_on_front = get_option('show_on_front');
-		/* If settings > reading > Front page display: latest posts */
-		/* Use theme options > Blog settings for blog index */
-		if( $show_on_front == 'page' ):
-			$page_for_posts = get_option('page_for_posts');
-			$title = get_the_title($page_for_posts);
-		endif;
+	if ( is_home() && !is_front_page() ):
+		/* If the blog index is not the front page
+		 * then use the "posts page" (page_for_posts) title */
+		$page_for_posts = get_option('page_for_posts');
+		$title = get_the_title($page_for_posts);
 	endif;
 
 endif;

@@ -11,8 +11,7 @@
 
 get_header();
 
-	get_template_part( 'part-title' );
-
+get_template_part( 'part-title' );
 
 ?><div id="main-content" class="container"><?php
 	
@@ -79,7 +78,7 @@ get_header();
 
 		?><div class="post-content"><?php
 				if ( get_post_format() || post_password_required()
-				|| "Full content" == blackoot_get_option('blog_index_shows') )
+				|| "content" == get_theme_mod('blackoot_blog_index_content') )
 						the_content();
 					else the_excerpt();
 		?></div><?php

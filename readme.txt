@@ -48,7 +48,7 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 		* All brand icons are trademarks of their respective owners.
 		* The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
 
-All other files are copyright 2013-2014 Iceable Media and released under the terms of the GNU GPLv2 License.
+All other files are copyright 2014-2015 Iceable Media and released under the terms of the GNU GPLv2 License.
 
 == TRANSLATIONS ==
 
@@ -56,13 +56,20 @@ Currently available translations:
 
 * French (fr_FR) translation: by Iceable Themes
 
-Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 50 strings only.
+Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
 If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
 
 If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at http://www.iceablethemes.com
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.0 =
+July 22th, 2015
+* Replaced theme options panel with Customizer implementation
+* Added "title-tag" support
+* Updated fr_FR translation file
+* Tested with WordPress 4.2.2
 
 = 1.0.6 =
 February 9th, 2015
