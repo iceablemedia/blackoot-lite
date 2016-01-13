@@ -1,6 +1,6 @@
 /**
  * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
- * Copyright 2014-2015 Mathieu Sarrasin - Iceable Media
+ * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
  * Javascripts
  */
 
