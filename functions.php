@@ -211,6 +211,12 @@ function blackoot_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'blackoot_excerpt_more' );
 
+function blackoot_content_more( $more ) {
+	global $post;
+	return '<div class="read-more navbutton"><a href="'. get_permalink() . '#more-' . $post->ID . '">'. __("Read More", 'blackoot-lite') .'<i class="fa fa-angle-double-right"></i></a></div>';
+}
+add_filter( 'the_content_more_link', 'blackoot_content_more' );
+
 /*
  * Rewrite and replace wp_trim_excerpt() so it adds a relevant read more link
  * when the <!--more--> or <!--nextpage--> quicktags are used

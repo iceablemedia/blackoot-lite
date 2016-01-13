@@ -64,6 +64,12 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.4 =
+January 13th, 2016
+* Enhanced support for <!--more--> quicktag
+TODO: Update copyright to 2016
+TODO: Test with WordPress 4.4.1
+
 = 1.1.3 =
 November 23rd, 2015
 * Fixed issue with sidebar in WordPress 4.4
