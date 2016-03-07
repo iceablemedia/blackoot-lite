@@ -55,6 +55,7 @@ All other files are copyright 2014-2016 Iceable Media and released under the ter
 Currently available translations:
 
 * French (fr_FR) translation: by Iceable Themes
+* Spanish (es_ES) translation (front-end): by David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
 
 Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
 If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
@@ -63,6 +64,10 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.5 =
+March 7th, 2016
+* Added user-contributed Spanish (es_ES) translation
 
 = 1.1.4 =
 January 13th, 2016

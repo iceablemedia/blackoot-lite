@@ -1,0 +1,358 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Blackoot Lite 1.1\n"
+"POT-Creation-Date: 2016-03-07 16:13+0100\n"
+"PO-Revision-Date: 2016-03-07 16:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: David Ospina\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:19
+msgid "Page Not Found"
+msgstr "Página no Encontrada"
+
+#: ../404.php:20 ../index.php:104 ../page-templates/full-width.php:56
+#: ../page.php:56 ../single.php:105
+msgid "What you are looking for isn't here..."
+msgstr "Lo que estás buscando no está aquí..."
+
+#: ../404.php:21
+msgid "Maybe a search will help ?"
+msgstr "¿Tal vez una búsqueda?"
+
+#: ../comments.php:13
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Esta publicación está protegida por contraseña. Entra la contraseña para ver "
+"los comentarios."
+
+#: ../comments.php:19
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Una Respuesta a %2$s"
+
+#: ../comments.php:30
+msgid "Older comments"
+msgstr "Comentarios más antiguos"
+
+#: ../comments.php:33
+msgid "Newer comments"
+msgstr "Comentarios más recientes"
+
+#: ../comments.php:42
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: ../footer.php:23
+#, php-format
+msgid "Copyright &copy; %s %s."
+msgstr ""
+
+#: ../footer.php:25
+#, php-format
+msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr "Con la tecnología de <a href=\"%s\" title=\"%s\">%s</a>."
+
+#: ../footer.php:26
+msgid "http://wordpress.org/"
+msgstr "http://es.wordpress.org/"
+
+#: ../footer.php:27
+msgid "Semantic Personal Publishing Platform"
+msgstr "Plataforma de Publicación Personal Semántica"
+
+#: ../footer.php:28
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../footer.php:31
+#, php-format
+msgid "Blackoot design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+msgstr "Diseño Blackoot por <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+
+#: ../functions.php:112
+msgid "Default Sidebar"
+msgstr "Barra Lateral por Defecto"
+
+#: ../functions.php:120
+msgid "Footer"
+msgstr "Pie de Página"
+
+#: ../functions.php:210 ../functions.php:216
+msgid "Read More"
+msgstr "Leer Más"
+
+#: ../functions.php:290
+msgid "Next Post"
+msgstr "Siguiente Publicación"
+
+#: ../functions.php:296
+msgid "Previous Post"
+msgstr "Publicación Anterior"
+
+#: ../functions.php:357
+msgid "Home"
+msgstr "Inicio"
+
+#: ../functions.php:383
+msgid "Daily Archives"
+msgstr "Archivos Diarios"
+
+#: ../functions.php:384
+msgid "Monthly Archives"
+msgstr "Archivos Mensuales"
+
+#: ../functions.php:385
+msgid "Yearly Archives"
+msgstr "Archivos Anuales"
+
+#: ../functions.php:386
+msgid "Author Archives"
+msgstr "Archivos por Autor"
+
+#: ../functions.php:387
+msgid "Blog Archives"
+msgstr "Archivos de Blog"
+
+#: ../functions.php:388
+msgid "Search Results"
+msgstr "Resultados de Búsqueda"
+
+#: ../functions.php:389
+msgid "404 Error"
+msgstr "Error 404"
+
+#: ../inc/customizer/customizer.php:18
+msgid "Background"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:23
+msgid "Logo & Favicon"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:28
+msgid "Logo"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:35
+msgid "Blog Settings"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:40
+msgid "Misc"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:45
+msgid "More"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:57
+msgid "Upload your logo"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:58
+msgid "If no logo is uploaded, the site title will be displayed instead."
+msgstr ""
+
+#: ../inc/customizer/customizer.php:74
+msgid "Upload a custom favicon"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:75
+msgid ""
+"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
+"GIF, or ICO."
+msgstr ""
+
+#: ../inc/customizer/customizer.php:91
+msgid "Blog Index Content"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:96
+msgid "Excerpt"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:97
+msgid "Full content"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:111
+msgid "Responsive Mode"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:116 ../inc/customizer/customizer.php:136
+#: ../inc/customizer/customizer.php:155 ../inc/customizer/customizer.php:174
+#: ../inc/customizer/customizer.php:193
+msgid "On"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:117 ../inc/customizer/customizer.php:137
+#: ../inc/customizer/customizer.php:156 ../inc/customizer/customizer.php:175
+#: ../inc/customizer/customizer.php:194
+msgid "Off"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:131
+msgid "Display header on Homepage"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:150
+msgid "Display header on Blog Index"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:169
+msgid "Display header on Single Posts"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:188
+msgid "Display header on Pages"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:208
+msgid "Get Blackoot Pro"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:209
+msgid ""
+"Unleash the full potential of Blackoot with tons of additional settings, "
+"advanced features and premium support."
+msgstr ""
+
+#: ../inc/customizer/customizer.php:225
+msgid "Blackoot Lite support forums"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:226
+msgid "Have a question? Need help?"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:242
+msgid "Rate Blackoot Lite"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:243
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:268
+msgid "Upgrade to Blackoot Pro!"
+msgstr ""
+
+#: ../index.php:49 ../single.php:35
+#, php-format
+msgid "View all posts by %s"
+msgstr "Ver todas las publicaciones de %s"
+
+#: ../index.php:54 ../single.php:40
+msgid "Category"
+msgstr "Categoría"
+
+#: ../index.php:65 ../single.php:49
+msgid "0 Comment"
+msgstr "0 Comentarios"
+
+#: ../index.php:65 ../single.php:49
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: ../index.php:65 ../single.php:49
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: ../index.php:65 ../single.php:49
+msgid "Comments Off"
+msgstr "No Comentable"
+
+#: ../index.php:75 ../page-templates/full-width.php:41 ../page.php:41
+#: ../single.php:59
+msgid "Edit"
+msgstr "Editar"
+
+#: ../index.php:96 ../index.php:103 ../page-templates/full-width.php:55
+#: ../page.php:55 ../single.php:104
+msgid "Not Found"
+msgstr "No Encontrado"
+
+#: ../index.php:97
+#, php-format
+msgid "Your search for \"%s\" did not return any result."
+msgstr "Tu búsqueda de \"%s\" No dio ningún resultado."
+
+#: ../index.php:98
+msgid "Would you like to try another search ?"
+msgstr "¿Te gustaría buscar otra cosa?"
+
+#: ../index.php:113
+msgid "Previous Posts"
+msgstr "Publicaciones Previas"
+
+#: ../index.php:116
+msgid "Next Posts"
+msgstr "Siguientes Publicaciones"
+
+#: ../page-templates/full-width.php:31 ../page.php:31 ../single.php:75
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../part-title.php:22
+msgid "404: Page Not Found"
+msgstr "404: Página no encontrada"
+
+#: ../part-title.php:27
+#, php-format
+msgid "Search Results for \"%s\""
+msgstr "Resultados de búsqueda para \"%s\""
+
+#: ../part-title.php:32
+#, php-format
+msgid "Tag: %s"
+msgstr "Etiqueta: %s"
+
+#: ../part-title.php:37
+#, php-format
+msgid "Category: %s"
+msgstr "Categoría: %s"
+
+#: ../part-title.php:42
+#, php-format
+msgid "Daily archives: %s"
+msgstr "Archivos Diarios: %s"
+
+#: ../part-title.php:46
+#, php-format
+msgid "Monthly archives: %s"
+msgstr "Archivos Mensuales: %s"
+
+#: ../part-title.php:50
+#, php-format
+msgid "Yearly archives: %s"
+msgstr "Archivos Anuales: %s"
+
+#: ../sidebar.php:16
+msgid "Recent Posts"
+msgstr "Publicaciones Recientes"
+
+#: ../sidebar.php:21
+msgid "Archives"
+msgstr "Archivos"
+
+#: ../sidebar.php:26
+msgid "Meta"
+msgstr ""
+
+#: ../single.php:80
+msgid "Next page"
+msgstr "Siguiente Página"
+
+#: ../single.php:81
+msgid "Previous page"
+msgstr "Página Anterior"
