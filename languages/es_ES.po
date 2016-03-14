@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Blackoot Lite 1.1\n"
-"POT-Creation-Date: 2016-03-07 16:13+0100\n"
-"PO-Revision-Date: 2016-03-07 16:25+0100\n"
+"POT-Creation-Date: 2016-03-14 10:56+0100\n"
+"PO-Revision-Date: 2016-03-14 10:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: David Ospina\n"
 "Language: es_ES\n"
@@ -133,7 +133,7 @@ msgstr "Error 404"
 
 #: ../inc/customizer/customizer.php:18
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #: ../inc/customizer/customizer.php:23
 msgid "Logo & Favicon"
@@ -145,107 +145,111 @@ msgstr ""
 
 #: ../inc/customizer/customizer.php:35
 msgid "Blog Settings"
-msgstr ""
+msgstr "Configuraciones de Blog"
 
 #: ../inc/customizer/customizer.php:40
 msgid "Misc"
-msgstr ""
+msgstr "Misceláneo"
 
 #: ../inc/customizer/customizer.php:45
 msgid "More"
-msgstr ""
+msgstr "Más"
 
 #: ../inc/customizer/customizer.php:57
 msgid "Upload your logo"
-msgstr ""
+msgstr "Sube tu logo"
 
 #: ../inc/customizer/customizer.php:58
 msgid "If no logo is uploaded, the site title will be displayed instead."
-msgstr ""
+msgstr "Si no se sube un logo, se mostrará el nombre del sitio."
 
 #: ../inc/customizer/customizer.php:74
 msgid "Upload a custom favicon"
-msgstr ""
+msgstr "Sube un favicon personalizado"
 
 #: ../inc/customizer/customizer.php:75
 msgid ""
 "Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
 "GIF, or ICO."
 msgstr ""
+"Pon tu favicon. Se recomienda un tamaño de 16x16 o 32x32 pixeles. Formatos "
+"PNG (recomendado), GIF, o ICO."
 
 #: ../inc/customizer/customizer.php:91
 msgid "Blog Index Content"
-msgstr ""
+msgstr "Contenido del Index de Blog"
 
 #: ../inc/customizer/customizer.php:96
 msgid "Excerpt"
-msgstr ""
+msgstr "Extracto"
 
 #: ../inc/customizer/customizer.php:97
 msgid "Full content"
-msgstr ""
+msgstr "Contenido completo"
 
 #: ../inc/customizer/customizer.php:111
 msgid "Responsive Mode"
-msgstr ""
+msgstr "Modo Responsivo"
 
 #: ../inc/customizer/customizer.php:116 ../inc/customizer/customizer.php:136
 #: ../inc/customizer/customizer.php:155 ../inc/customizer/customizer.php:174
 #: ../inc/customizer/customizer.php:193
 msgid "On"
-msgstr ""
+msgstr "Activado"
 
 #: ../inc/customizer/customizer.php:117 ../inc/customizer/customizer.php:137
 #: ../inc/customizer/customizer.php:156 ../inc/customizer/customizer.php:175
 #: ../inc/customizer/customizer.php:194
 msgid "Off"
-msgstr ""
+msgstr "Desactivado"
 
 #: ../inc/customizer/customizer.php:131
 msgid "Display header on Homepage"
-msgstr ""
+msgstr "Mostrar cabecera en la Página Inicial"
 
 #: ../inc/customizer/customizer.php:150
 msgid "Display header on Blog Index"
-msgstr ""
+msgstr "Mostrar cabecera en el Index de Blog"
 
 #: ../inc/customizer/customizer.php:169
 msgid "Display header on Single Posts"
-msgstr ""
+msgstr "Mostrar cabecera en Publicaciones Unitarias"
 
 #: ../inc/customizer/customizer.php:188
 msgid "Display header on Pages"
-msgstr ""
+msgstr "Mostrar cabecera en Páginas"
 
 #: ../inc/customizer/customizer.php:208
 msgid "Get Blackoot Pro"
-msgstr ""
+msgstr "Obtener Blackoot Pro"
 
 #: ../inc/customizer/customizer.php:209
 msgid ""
 "Unleash the full potential of Blackoot with tons of additional settings, "
 "advanced features and premium support."
 msgstr ""
+"Libera el potencial completo de Blackoot con toneladas de configuraciones "
+"adicionales, características avanzadas y soporte premium."
 
 #: ../inc/customizer/customizer.php:225
 msgid "Blackoot Lite support forums"
-msgstr ""
+msgstr "Foros de soporte de Blackoot Lite"
 
 #: ../inc/customizer/customizer.php:226
 msgid "Have a question? Need help?"
-msgstr ""
+msgstr "¿Alguna pregunta? ¿Necesitas ayuda?"
 
 #: ../inc/customizer/customizer.php:242
 msgid "Rate Blackoot Lite"
-msgstr ""
+msgstr "Puntúa Blackoot Lite"
 
 #: ../inc/customizer/customizer.php:243
 msgid "Like this theme? We'd love to hear your feedback!"
-msgstr ""
+msgstr "¿Te gusta este tema? ¡Nos encantaría escuchar tus comentarios!"
 
 #: ../inc/customizer/customizer.php:268
 msgid "Upgrade to Blackoot Pro!"
-msgstr ""
+msgstr "¡Actualiza a Blackoot Pro!"
 
 #: ../index.php:49 ../single.php:35
 #, php-format

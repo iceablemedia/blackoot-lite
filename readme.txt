@@ -65,6 +65,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.6 =
+March 14th, 2016
+* Updated user-contributed Spanish (es_ES) translation (now a full translation)
+
 = 1.1.5 =
 March 7th, 2016
 * Added user-contributed Spanish (es_ES) translation
