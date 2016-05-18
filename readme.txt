@@ -1,7 +1,5 @@
 Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
 Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
-Changelog
-
 
 == ABOUT BLACKOOT LITE ==
 
@@ -55,7 +53,7 @@ All other files are copyright 2014-2016 Iceable Media and released under the ter
 Currently available translations:
 
 * French (fr_FR) translation: by Iceable Themes
-* Spanish (es_ES) translation (front-end): by David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
+* Spanish (es_ES) translation: by David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
 
 Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
 If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
@@ -64,6 +62,12 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.7 =
+May 18th, 2016
+* Updated translation credit for full spanish translation
+* Updated font-awesome to 4.6.3
+* Tested with WordPress 4.5.2
 
 = 1.1.6 =
 March 14th, 2016
