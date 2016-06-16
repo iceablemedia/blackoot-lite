@@ -67,6 +67,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 June 16th, 2016
 * Updated external links to wordpress.org and iceablethemes.com to https
 * Removed php closing tags from end of files to prevent potential issues
+* Updated theme tags for WordPress.org
 
 = 1.1.7 =
 May 18th, 2016
