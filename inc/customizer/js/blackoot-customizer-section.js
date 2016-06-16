@@ -1,6 +1,6 @@
 /**
  *
- * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -12,7 +12,7 @@
 
 	// Add Blackoot Pro upgrade message
 	upgrade = $('<a class="blackoot-customize-pro"></a>')
-	.attr('href', "http://www.iceablethemes.com/shop/blackoot-pro/")
+	.attr('href', "https://www.iceablethemes.com/shop/blackoot-pro/")
 	.attr('target', '_blank')
 	.text(blackoot_customizer_section_l10n.upgrade_pro)
 	;

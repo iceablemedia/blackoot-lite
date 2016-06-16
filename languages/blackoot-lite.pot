@@ -60,7 +60,7 @@ msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
 msgstr ""
 
 #: ../footer.php:26
-msgid "http://wordpress.org/"
+msgid "https://wordpress.org/"
 msgstr ""
 
 #: ../footer.php:28

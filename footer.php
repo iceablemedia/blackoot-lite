@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -23,13 +23,13 @@
 	printf( __('Copyright &copy; %s %s.', 'blackoot-lite'), date('Y'), get_bloginfo('name') );
 	echo ' ';
 	printf( __('Proudly powered by <a href="%s" title="%s">%s</a>.', 'blackoot-lite'),
-		esc_url( __('http://wordpress.org/', 'blackoot-lite') ),
+		esc_url( __('https://wordpress.org/', 'blackoot-lite') ),
 		esc_attr__( 'Semantic Personal Publishing Platform', 'blackoot-lite' ),
 		__('WordPress', 'blackoot-lite')
 	);
 	echo ' ';
 	printf( __('Blackoot design by <a href="%s" title="%s">Iceable Themes</a>.', 'blackoot-lite'),
-		esc_url( 'http://www.iceablethemes.com' ),
+		esc_url( 'https://www.iceablethemes.com' ),
 		esc_attr( 'Iceablethemes', 'blackoot-lite' )
 	);
 

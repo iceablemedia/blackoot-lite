@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -199,7 +199,7 @@ class Blackoot_Customizer {
 
 		// Setting and control for Blackoot upgrade message
 		$wp_customize->add_setting( 'blackoot_upgrade', array(
-			'default'	=> 'http://www.iceablethemes.com/shop/blackoot-pro/',
+			'default'	=> 'https://www.iceablethemes.com/shop/blackoot-pro/',
 			'sanitize_callback' => 'blackoot_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -216,7 +216,7 @@ class Blackoot_Customizer {
 
 		// Setting and control for Blackoot support forums message
 		$wp_customize->add_setting( 'blackoot_support', array(
-			'default'	=> 'http://www.iceablethemes.com/forums/forum/free-support-forum/blackoot-lite/',
+			'default'	=> 'https://www.iceablethemes.com/forums/forum/free-support-forum/blackoot-lite/',
 			'sanitize_callback' => 'blackoot_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -233,7 +233,7 @@ class Blackoot_Customizer {
 
 		// Setting and control for Blackoot feedback message
 		$wp_customize->add_setting( 'blackoot_feedback', array(
-			'default'	=> 'http://wordpress.org/support/view/theme-reviews/blackoot-lite',
+			'default'	=> 'https://wordpress.org/support/view/theme-reviews/blackoot-lite',
 			'sanitize_callback' => 'blackoot_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -311,5 +311,3 @@ function blackoot_sanitize_on_off( $input ){
 function blackoot_sanitize_button( $input ){
 	return '';
 }
-
-?>

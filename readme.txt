@@ -1,4 +1,4 @@
-Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
 Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
 
 == ABOUT BLACKOOT LITE ==
@@ -6,7 +6,7 @@ Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
 Blackoot Lite is an elegant, responsive, multi-purpose theme for WordPress. Perfect for photography, or music oriented blogs as well as portfolio and creative business websites.
 It features two widgetizable areas in the sidebar and the optional footer, two custom menu locations in the navbar and footer, optional tagline display, custom logo and favicon, custom header image and custom background.
 
-Blackoot Lite is the lite version of Blackoot Pro, which comes with many additional features and access to premium class pro support forum and can be found at http://www.iceablethemes.com
+Blackoot Lite is the lite version of Blackoot Pro, which comes with many additional features and access to premium class pro support forum and can be found at https://www.iceablethemes.com
 
 == GETTING STARTED ==
 
@@ -15,13 +15,13 @@ Blackoot Lite is the lite version of Blackoot Pro, which comes with many additio
 * It is highly recommended to set a menu (in appearance > menu) instead of relying on the default fallback menu. Doing so will automatically activate the dropdown version of your menu in responsive mode.
 * You can also set a custom menu to appear at the bottom right of your site. Note this footer menu doesn't support sub-menus, only top-level menu items will be displayed.
 
-Additional documentation and free support forums can be found at http://www.iceablethemes.com under "support".
+Additional documentation and free support forums can be found at https://www.iceablethemes.com under "support".
 
 == SPECIAL FEATURES INSTRUCTIONS ==
 
 * Footer widgets: The widgetizable footer is disabled by default. To activate it, simply go to Appearance > Widgets and drop some widgets in the "Footer" area, just like you would do for the sidebar. It is recommended to use 4 widgets in the footer, or no widgets at all to disable it.
 
-Additional documentation and free support forums can be found at http://www.iceablethemes.com under "support".
+Additional documentation and free support forums can be found at https://www.iceablethemes.com under "support".
 
 == LICENSE ==
 
@@ -56,12 +56,17 @@ Currently available translations:
 * Spanish (es_ES) translation: by David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
 
 Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
-If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
+If you don't have a .po file editor yet, you can download Poedit from https://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
 
-If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at http://www.iceablethemes.com
+If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at https://www.iceablethemes.com
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.8 =
+June 16th, 2016
+* Updated external links to wordpress.org and iceablethemes.com to https
+* Removed php closing tags from end of files to prevent potential issues
 
 = 1.1.7 =
 May 18th, 2016

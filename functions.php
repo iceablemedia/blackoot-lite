@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Blackoot Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -397,5 +397,3 @@ function blackoot_breadcrumbs() {
  */
 
 require_once 'inc/customizer/customizer.php';
-
-?>

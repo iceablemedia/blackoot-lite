@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blackoot Lite 1.1\n"
 "POT-Creation-Date: 2016-03-14 10:56+0100\n"
-"PO-Revision-Date: 2016-03-14 10:56+0100\n"
+"PO-Revision-Date: 2016-06-15 15:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: David Ospina\n"
 "Language: es_ES\n"
@@ -63,8 +63,8 @@ msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
 msgstr "Con la tecnología de <a href=\"%s\" title=\"%s\">%s</a>."
 
 #: ../footer.php:26
-msgid "http://wordpress.org/"
-msgstr "http://es.wordpress.org/"
+msgid "https://wordpress.org/"
+msgstr "https://es.wordpress.org/"
 
 #: ../footer.php:27
 msgid "Semantic Personal Publishing Platform"
