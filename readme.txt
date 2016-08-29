@@ -55,13 +55,19 @@ Currently available translations:
 * French (fr_FR) translation: by Iceable Themes
 * Spanish (es_ES) translation: by David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
 
-Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
+Translating this theme into your own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
 If you don't have a .po file editor yet, you can download Poedit from https://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
 
 If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at https://www.iceablethemes.com
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.9 =
+August 29th, 2016
+* Removed function blackoot_render_title() used as a fallback for title tag support
+* Dropped support for WordPress lesser than 4.1
+* Tested with WordPress 4.6
 
 = 1.1.8 =
 June 16th, 2016
