@@ -63,6 +63,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.10 =
+September 21th, 2016
+* Reviewed and enhanced hentry schema on blog index and single post entries
+
 = 1.1.9 =
 August 29th, 2016
 * Removed function blackoot_render_title() used as a fallback for title tag support

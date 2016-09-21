@@ -660,6 +660,8 @@ h3.entry-title {
 	margin-bottom: 10px;
 }
 
+.postmetadata .hatom-feed-info { display: none; }
+
 .single-portfolio .single-post .postmetadata { margin-bottom: 20px; }
 
 .postmetadata span {

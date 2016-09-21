@@ -24,6 +24,12 @@ get_template_part( 'part-title' );
 		/* Post Metadata */
 		?><div class="postmetadata"><?php
 
+		/* Meta: entry title
+		 * (Not displayed on the front end, but needed for valid structured data
+		 * as the title is displayed outside of the hentry container in this
+		 * template) */
+		 ?><span class="entry-title hatom-feed-info"><?php the_title(); ?></span><?php
+
 		/* Meta: Date */
 			?><span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php
 				the_time( get_option( 'date_format' ) ); ?>
@@ -67,7 +73,7 @@ get_template_part( 'part-title' );
 			?></div><?php
 		endif;
 
-		?><div class="post-contents"><?php
+		?><div class="post-contents entry-content"><?php
 
 			the_content();
 			?><div class="clear"></div><?php
