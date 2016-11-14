@@ -63,6 +63,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.11 =
+November 14th, 2016
+* Updated searchforms to HTML5 markup
+
 = 1.1.10 =
 September 21th, 2016
 * Reviewed and enhanced structured data on blog index and single post entries
