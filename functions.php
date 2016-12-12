@@ -124,10 +124,6 @@ add_action( 'widgets_init', 'blackoot_widgets_init' );
  */
 function blackoot_styles() {
 
-	$template_directory_uri = get_template_directory_uri(); // Parent theme URI
-	$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
-	$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
-
 	$responsive_mode = get_theme_mod('blackoot_responsive_mode');
 
 	if ($responsive_mode != 'off'):
@@ -136,31 +132,47 @@ function blackoot_styles() {
 		$stylesheet = '/css/blackoot-unresponsive.min.css';
 	endif;
 
-	/* Child theme support:
-	 * Enqueue child-theme's versions of stylesheet in /css if they exist,
-	 * or the parent theme's version otherwise
-	 */
-	if ( @file_exists( $stylesheet_directory . $stylesheet ) )
-		wp_register_style( 'blackoot', $stylesheet_directory_uri . $stylesheet );
-	else
-		wp_register_style( 'blackoot', $template_directory_uri . $stylesheet );
+	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
+		/* Child theme support:
+		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
+		 * or the parent theme's version otherwise
+		 */
+		wp_register_style( 'blackoot', get_theme_file_uri( $stylesheet ) );
 
-	// Always enqueue style.css from the current theme
-	wp_register_style( 'blackoot-style', $stylesheet_directory_uri . '/style.css');
+		// Enqueue style.css from the current theme
+		wp_register_style( 'blackoot-style', get_theme_file_uri ( 'style.css' ) );
+
+		// Load font-awesome
+		wp_register_style( 'font-awesome', get_theme_file_uri ( 'css/font-awesome/css/font-awesome.min.css' ) );
+
+	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
+
+		$template_directory_uri = get_template_directory_uri(); // Parent theme URI
+		$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
+		$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
+
+		/* Child theme support:
+		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
+		 * or the parent theme's version otherwise
+		 */
+		if ( @file_exists( $stylesheet_directory . $stylesheet ) )
+			wp_register_style( 'blackoot', $stylesheet_directory_uri . $stylesheet );
+		else
+			wp_register_style( 'blackoot', $template_directory_uri . $stylesheet );
+
+		// Always enqueue style.css from the current theme
+		wp_register_style( 'blackoot-style', $stylesheet_directory_uri . '/style.css');
+
+		// Load font-awesome
+		wp_register_style( 'font-awesome', $template_directory_uri . "/css/font-awesome/css/font-awesome.min.css" );
+
+	endif;
 
 	wp_enqueue_style( 'blackoot' );
 	wp_enqueue_style( 'blackoot-style' );
+	wp_enqueue_style( 'font-awesome' );
 
-	// Load font-awesome
-	wp_enqueue_style( 'font-awesome', $template_directory_uri . "/css/font-awesome/css/font-awesome.min.css" );
-
-	// Google Webfonts
-	if ( !is_user_logged_in() ):
-		// Enqueue Open Sans if the current user is not logged in
-		// WordPress already adds Open Sans for logged in users
-		wp_enqueue_style( 'Open-sans-webfonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
-	endif;
-
+	wp_enqueue_style( 'Open-sans-webfonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
 	wp_enqueue_style( 'Quicksand-webfonts', "//fonts.googleapis.com/css?family=Quicksand:400italic,700italic,400,700&subset=latin,latin-ext", array(), null );
 
 }
@@ -178,7 +190,12 @@ add_action( 'init', 'blackoot_editor_styles' );
  * Enqueue javascripts
  */
 function blackoot_scripts() {
-	wp_enqueue_script('blackoot', get_template_directory_uri() . '/js/blackoot.min.js', array('jquery','hoverIntent'));
+
+	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
+		wp_enqueue_script('blackoot', get_theme_file_uri( '/js/blackoot.min.js' ), array('jquery','hoverIntent'));
+	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
+		wp_enqueue_script('blackoot', get_template_directory_uri() . '/js/blackoot.min.js', array('jquery','hoverIntent'));
+	endif;
 	/* Threaded comments support */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );

@@ -63,6 +63,12 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.12 =
+December 12th, 2016
+* Now using get_theme_file_uri() to register stylesheets and javascripts for WordPress 4.7
+* Now enqueuing 'Open Sans' whether user is logged in or not
+* Tested with WordPress 4.7
+
 = 1.1.11 =
 November 14th, 2016
 * Updated searchforms to HTML5 markup
