@@ -63,6 +63,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.13 =
+December 13th, 2016
+* Fixed "read more" link with manually set excerpts
+
 = 1.1.12 =
 December 12th, 2016
 * Now using get_theme_file_uri() to register stylesheets and javascripts for WordPress 4.7

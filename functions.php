@@ -241,7 +241,7 @@ function blackoot_trim_excerpt($text = '') {
 		$text = apply_filters('the_content', $text);
 		$text = str_replace(']]>', ']]&gt;', $text);
 		$excerpt_length = apply_filters('excerpt_length', 55);
-		$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
 		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 
 		/* If the post_content contains a <!--more--> OR a <!--nextpage--> quicktag
@@ -252,7 +252,11 @@ function blackoot_trim_excerpt($text = '') {
 		 $text .= $excerpt_more;
 		}
 
+	} else { // Manual excerpt is set
+		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
+		$text .= $excerpt_more;
 	}
+
 	return apply_filters('blackoot_trim_excerpt', $text, $raw_excerpt);
 }
 
