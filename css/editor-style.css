@@ -2,7 +2,7 @@
  *
  * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
- * Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
+ * Copyright 2014-2017 Mathieu Sarrasin - Iceable Media
  *
  * Editor Styles
  *
@@ -51,7 +51,7 @@ blockquote, blockquote p {
 	font-style: italic;
 }
 
-blockquote {	
+blockquote {
 	margin: 0 40px 20px 40px;
 	padding: 10px 20px;
 	border-left: 3px solid #DDD;

@@ -1,5 +1,5 @@
 Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
-Copyright 2014-2016 Mathieu Sarrasin - Iceable Media
+Copyright 2014-2017 Mathieu Sarrasin - Iceable Media
 
 == ABOUT BLACKOOT LITE ==
 
@@ -46,7 +46,7 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 		* All brand icons are trademarks of their respective owners.
 		* The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
 
-All other files are copyright 2014-2016 Iceable Media and released under the terms of the GNU GPLv2 License.
+All other files are copyright 2014-2017 Iceable Media and released under the terms of the GNU GPLv2 License.
 
 == TRANSLATIONS ==
 
@@ -62,6 +62,10 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.14 =
+January 9th 2017
+* Updated copyright to 2017
 
 = 1.1.13 =
 December 13th, 2016
