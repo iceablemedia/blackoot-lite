@@ -63,6 +63,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.15 =
+March 8th, 2017
+* Fixed blackoot_remove_rel_cat() to only remove "category" (but not "tag") value from the rel attribute
+* Added php tags in footer.php, making it less confusing for users who want to modify the footer note
+
 = 1.1.14 =
 January 9th 2017
 * Updated copyright to 2017

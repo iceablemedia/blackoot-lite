@@ -207,7 +207,7 @@ add_action('wp_enqueue_scripts', 'blackoot_scripts');
  */
 function blackoot_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category"', "", $text);
-	$text = str_replace(' rel="category tag"', "", $text);
+	$text = str_replace(' rel="category tag"', ' rel="tag"', $text);
 	return $text;
 }
 add_filter( 'the_category', 'blackoot_remove_rel_cat' );
