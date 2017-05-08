@@ -63,6 +63,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.16 =
+May 8th, 2017
+* Added theme constants
+* Load CSS and JS file with theme version to prevent potential issue after updates
+
 = 1.1.15 =
 March 8th, 2017
 * Fixed blackoot_remove_rel_cat() to only remove "category" (but not "tag") value from the rel attribute

@@ -10,6 +10,16 @@
  */
 
 /*
+ * Theme constants
+ */
+define( "THEME_DIR", get_template_directory() );
+define( "THEME_DIR_URI", get_template_directory_uri() );
+define( "STYLESHEET_DIR", get_stylesheet_directory() );
+define( "STYLESHEET_DIR_URI", get_stylesheet_directory_uri() );
+$the_theme = wp_get_theme();
+define( "THEME_VERSION", $the_theme->get( 'Version' ) );
+
+/*
  * Setup and registration functions
  */
 function blackoot_setup(){
@@ -18,7 +28,7 @@ function blackoot_setup(){
 	 * Translations can be added to the /languages directory.
 	 * A .pot template file is included to get you started
 	 */
-	load_theme_textdomain('blackoot-lite', get_template_directory() . '/languages');
+	load_theme_textdomain('blackoot-lite', THEME_DIR . '/languages');
 
 	// Content Width
 	global $content_width;
@@ -50,7 +60,7 @@ function blackoot_setup(){
 	/* Custom background support */
 	add_theme_support( 'custom-background',
 						array(	'default-color' => '111111',
-								'default-image' => get_template_directory_uri() . '/img/zwartevilt.png',
+								'default-image' => THEME_DIR_URI . '/img/zwartevilt.png',
 								)
 					);
 
@@ -137,34 +147,30 @@ function blackoot_styles() {
 		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		wp_register_style( 'blackoot', get_theme_file_uri( $stylesheet ) );
+		wp_register_style( 'blackoot', get_theme_file_uri( $stylesheet ), array(), THEME_VERSION );
 
 		// Enqueue style.css from the current theme
-		wp_register_style( 'blackoot-style', get_theme_file_uri ( 'style.css' ) );
+		wp_register_style( 'blackoot-style', get_theme_file_uri ( 'style.css' ), array(), THEME_VERSION );
 
 		// Load font-awesome
-		wp_register_style( 'font-awesome', get_theme_file_uri ( 'css/font-awesome/css/font-awesome.min.css' ) );
+		wp_register_style( 'font-awesome', get_theme_file_uri ( 'css/font-awesome/css/font-awesome.min.css' ), array(), THEME_VERSION );
 
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-
-		$template_directory_uri = get_template_directory_uri(); // Parent theme URI
-		$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
-		$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
 
 		/* Child theme support:
 		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		if ( @file_exists( $stylesheet_directory . $stylesheet ) )
-			wp_register_style( 'blackoot', $stylesheet_directory_uri . $stylesheet );
+		if ( @file_exists( STYLESHEET_DIR . $stylesheet ) )
+			wp_register_style( 'blackoot', STYLESHEET_DIR_URI . $stylesheet, array(), THEME_VERSION );
 		else
-			wp_register_style( 'blackoot', $template_directory_uri . $stylesheet );
+			wp_register_style( 'blackoot', THEME_DIR_URI . $stylesheet, array(), THEME_VERSION );
 
 		// Always enqueue style.css from the current theme
-		wp_register_style( 'blackoot-style', $stylesheet_directory_uri . '/style.css');
+		wp_register_style( 'blackoot-style', STYLESHEET_DIR_URI . '/style.css', array(), THEME_VERSION );
 
 		// Load font-awesome
-		wp_register_style( 'font-awesome', $template_directory_uri . "/css/font-awesome/css/font-awesome.min.css" );
+		wp_register_style( 'font-awesome', THEME_DIR_URI . "/css/font-awesome/css/font-awesome.min.css", array(), THEME_VERSION );
 
 	endif;
 
@@ -192,9 +198,9 @@ add_action( 'init', 'blackoot_editor_styles' );
 function blackoot_scripts() {
 
 	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
-		wp_enqueue_script('blackoot', get_theme_file_uri( '/js/blackoot.min.js' ), array('jquery','hoverIntent'));
+		wp_enqueue_script('blackoot', get_theme_file_uri( '/js/blackoot.min.js' ), array('jquery','hoverIntent'), THEME_VERSION );
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-		wp_enqueue_script('blackoot', get_template_directory_uri() . '/js/blackoot.min.js', array('jquery','hoverIntent'));
+		wp_enqueue_script('blackoot', THEME_DIR_URI . '/js/blackoot.min.js', array('jquery','hoverIntent'), THEME_VERSION );
 	endif;
 	/* Threaded comments support */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
