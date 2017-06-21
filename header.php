@@ -19,13 +19,6 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php if ( ! function_exists('wp_site_icon') ) :
-	$favicon = get_theme_mod('blackoot_favicon');
-	if ($favicon):
-		?><link rel="shortcut icon" href="<?php echo esc_url($favicon); ?>" /><?php
-	endif;
-endif;
-?>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo THEME_DIR_URI; ?>/js/html5.js" type="text/javascript"></script>

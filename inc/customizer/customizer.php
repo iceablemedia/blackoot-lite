@@ -18,18 +18,10 @@ class Blackoot_Customizer {
 		$wp_customize->get_section( 'background_image' )->title = __('Background', 'blackoot-lite');
 
 		// Add new sections
-		if ( ! function_exists('wp_site_icon') ) :
-		$wp_customize->add_section( 'blackoot_logo_favicon' , array(
-			'title'      => __( 'Logo & Favicon', 'blackoot-lite' ),
-			'priority'   => 20,
-		) );
-		else:
-		$wp_customize->add_section( 'blackoot_logo_favicon' , array(
+		$wp_customize->add_section( 'blackoot_logo_settings' , array(
 			'title'      => __( 'Logo', 'blackoot-lite' ),
 			'priority'   => 20,
 		) );
-		endif;
-
 
 		$wp_customize->add_section( 'blackoot_blog_settings' , array(
 			'title'      => __( 'Blog Settings', 'blackoot-lite' ),
@@ -56,29 +48,11 @@ class Blackoot_Customizer {
 				array(
 					'label'      => __( 'Upload your logo', 'blackoot-lite' ),
 					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'blackoot-lite'),
-					'section'    => 'blackoot_logo_favicon',
+					'section'    => 'blackoot_logo_settings',
 					'settings'   => 'blackoot_logo',
 				)
 			)
 		);
-
-		// Setting and control for favicon
-		if ( ! function_exists('wp_site_icon') ) :
-			$wp_customize->add_setting( 'blackoot_favicon' , array(
-				'default'     => '',
-				'sanitize_callback' => 'esc_url_raw',
-			) );
-			$wp_customize->add_control(
-				new WP_Customize_Image_Control( $wp_customize, 'blackoot_favicon',
-					array(
-						'label'			=> __( 'Upload a custom favicon', 'blackoot-lite' ),
-						'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'blackoot-lite'),
-						'section'		=> 'blackoot_logo_favicon',
-						'settings'		=> 'blackoot_favicon',
-					)
-				)
-			);
-		endif;
 
 		// Setting and control for blog index content switch
 		$wp_customize->add_setting( 'blackoot_blog_index_content' , array(
