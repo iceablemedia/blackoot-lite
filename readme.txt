@@ -70,6 +70,7 @@ August 23th, 2017
 * Enhanced: Wrapped pingback url in appropriate conditionals in header.php
 * Enhanced: HTML5Shiv is now properly enqueued
 * Enhanced: Prefixed theme constants
+* Enhanced: Prefixed variables names in part-title.php
 * Enhanced: Using get_the_archive_title() for archive page titles
 * Enhanced: Ordered placeholders for printf() in footer.php
 * Enhanced: Removed additional support for child themes for WP<4.7 (was relying on file_exists() which emits a PHP E_WARNING upon failure, and using error silencing)
