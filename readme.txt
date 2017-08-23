@@ -68,6 +68,7 @@ August 23th, 2017
 * Fixed: Singular placeholder in gettext function in comments.php
 * Fixed: PHP notice in breadcrumbs function
 * Enhanced: Wrapped pingback url in appropriate conditionals in header.php
+* Enhanced: HTML5Shiv is now properly enqueued
 
 = 1.1.17 =
 June 21th, 2017

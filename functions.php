@@ -202,6 +202,11 @@ function blackoot_scripts() {
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
 		wp_enqueue_script('blackoot', THEME_DIR_URI . '/js/blackoot.min.js', array('jquery','hoverIntent'), THEME_VERSION );
 	endif;
+
+	// Loads HTML5 JavaScript file to add support for HTML5 elements for IE < 9.
+  wp_enqueue_script( 'html5shiv', THEME_DIR_URI . '/js/html5.js' );
+  wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+
 	/* Threaded comments support */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
