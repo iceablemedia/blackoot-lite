@@ -27,28 +27,10 @@ else:
 		$title = sprintf( __('Search Results for "%s"', 'blackoot-lite'), get_search_query() );
 	endif;
 
-	/* TAG CONDITIONAL TITLE */
-	if ( is_tag() ):
-		$title = sprintf( __('Tag: %s', 'blackoot-lite'), single_tag_title('', false) );
-	endif;
-
-	/* CATEGORY CONDITIONAL TITLE */
-	if ( is_category() ):
-		$title = sprintf( __('Category: %s', 'blackoot-lite'), single_cat_title('', false) );
-	endif;
-
-	/* ARCHIVES CONDITIONAL TITLE */
-	if ( is_day() ):
-		$title = sprintf( __('Daily archives: %s', 'blackoot-lite'), get_the_time('F jS, Y') );
-	endif;
-
-	if ( is_month() ):
-		$title = sprintf( __('Monthly archives: %s', 'blackoot-lite'), get_the_time('F, Y') );
-	endif;
-
-	if ( is_year() ):
-		$title = sprintf( __('Yearly archives: %s', 'blackoot-lite'), get_the_time('Y') );
-	endif;
+	/* ARCHIVE CONDITIONAL TITLE */
+  if ( is_archive() ):
+    $title = get_the_archive_title();
+  endif;
 
 	/* DEFAULT BLOG INDEX TITLE */
 	if ( is_home() && !is_front_page() ):

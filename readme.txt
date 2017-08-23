@@ -69,6 +69,7 @@ August 23th, 2017
 * Fixed: PHP notice in breadcrumbs function
 * Enhanced: Wrapped pingback url in appropriate conditionals in header.php
 * Enhanced: HTML5Shiv is now properly enqueued
+* Enhanced: Using get_the_archive_title() for archive page titles
 
 = 1.1.17 =
 June 21th, 2017
