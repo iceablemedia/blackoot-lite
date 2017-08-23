@@ -388,9 +388,9 @@ function blackoot_breadcrumbs() {
 			echo '<span class="separator"> '.$sep.' </span>', get_the_title();
 
 		elseif (is_page()):
+			$output = '';
 			if($post->post_parent):
 				$anc = get_post_ancestors( $post->ID );
-				$output = '';
 				foreach ( $anc as $ancestor ):
 					$output = '<a href="'.esc_url(get_permalink($ancestor)).'" title="' . the_title_attribute( array( 'echo' => false, 'post' => $ancestor ) ).'">' . get_the_title($ancestor) . '</a><span class="separator"> '.$sep.' </span>' . $output;
 				endforeach;
