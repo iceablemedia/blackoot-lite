@@ -63,6 +63,9 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.18 =
+August 23th, 2017
+* Fixed: Singular placeholder in gettext function in comments.php
 = 1.1.17 =
 June 21th, 2017
 * Removed function_exists('wp_site_icon') checks and related functions (deprecated since WP 4.3)
