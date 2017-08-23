@@ -18,11 +18,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo THEME_DIR_URI; ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<?php if ( is_singular() && pings_open() ): ?>
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php endif; ?>
 <?php wp_head(); ?>
 </head><body <?php body_class(); ?>><?php
 
