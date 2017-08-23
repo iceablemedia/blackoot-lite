@@ -16,8 +16,8 @@ define( "BLACKOOT_THEME_DIR", get_template_directory() );
 define( "BLACKOOT_THEME_DIR_URI", get_template_directory_uri() );
 define( "BLACKOOT_STYLESHEET_DIR", get_stylesheet_directory() );
 define( "BLACKOOT_STYLESHEET_DIR_URI", get_stylesheet_directory_uri() );
-$the_theme = wp_get_theme();
-define( "BLACKOOT_THEME_VERSION", $the_theme->get( 'Version' ) );
+$blackoot_the_theme = wp_get_theme();
+define( "BLACKOOT_THEME_VERSION", $blackoot_the_theme->get( 'Version' ) );
 
 /*
  * Setup and registration functions
