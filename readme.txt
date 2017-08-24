@@ -65,6 +65,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 = 1.1.18 =
 August 23th, 2017
+* Updated: Font-Awesome to version 4.7.0
 * Fixed: Singular placeholder in gettext function in comments.php
 * Fixed: PHP notice in breadcrumbs function
 * Enhanced: Wrapped pingback url in appropriate conditionals in header.php
