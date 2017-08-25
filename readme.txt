@@ -64,7 +64,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 == CHANGELOG ==
 
 = 1.1.18 =
-August 23th, 2017
+August 25th, 2017
 * Updated: Font-Awesome to version 4.7.0
 * Fixed: Singular placeholder in gettext function in comments.php
 * Fixed: PHP notice in breadcrumbs function
