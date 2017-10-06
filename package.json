@@ -1,0 +1,26 @@
+{
+  "name": "blackoot-lite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iceable Media",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "load-grunt-tasks": "^3.3.0",
+    "grunt-sass": "^1.1.0",
+    "grunt-postcss": "^0.7.1",
+    "autoprefixer": "^6.1.2",
+    "grunt-csscomb": "^3.1.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-wp-i18n": "^0.5.3",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

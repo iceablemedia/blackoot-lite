@@ -1,0 +1,131 @@
+/* #Tablet (Portrait) | Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	#main-wrap { width: 768px; }
+
+	.tophead { padding-right: 15px; }
+
+	#logo { padding: 0 15px; }
+
+	#nav-wrap { padding: 0; }
+	#navbar > .menu-container { max-width: 557px; }
+
+	#page-container > * {
+		margin-left: 15px !important;
+		margin-right: 15px !important;
+		margin-bottom: 20px;
+	}
+	#page-container > hr { margin: 40px 0; }
+
+	.container	  { width: 768px; }
+	#page-container { width: 766px; }
+	#page-container.with-sidebar { width: 576px; }
+	#sidebar-container { width: 172px; }
+
+	.gallery .gallery-item { width: 50%!important; min-height: 210px; }
+	.gallery br { display: none; }
+
+	#sidebar-container {
+		width: 161px;
+		margin: 0 15px 0 0;
+	}
+
+	#calendar_wrap td { padding: 1px 3px;  }
+
+	#footer .container { width: 768px; }
+	#footer .widget { padding: 0 15px; }
+	.sub-footer-left { padding-left: 15px; }
+	.sub-footer-right { padding-right: 15px; }
+
+}
+
+/* #Mobile (Portrait) | Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+
+	#main-wrap { width: 310px; }
+
+	.tophead {
+		width: 100%;
+		padding: 5px 10px;
+		text-align: center;
+	}
+	.tophead #searchform { margin: auto; right: 0; width: 50%; }
+
+	#header #tagline { padding: 0; }
+
+	#nav-wrap { padding: 0 5px; }
+	#navbar	div { display: none; }
+	#navbar select {
+		display: block;
+		margin: 20px auto;
+		width: 90%;
+	}
+
+	#page-container > *,
+	#footer .container > ul > li {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		margin-bottom: 20px;
+	}
+
+	.container,
+	#page-container,
+	#page-container.with-sidebar,
+	#sidebar-container,
+	#sidebar {
+		width: 300px;
+	}
+
+	#page-container .post { margin: 0 0 20px 0 !important; }
+	#page-container > hr { margin: 0px 0 20px 0 !important; }
+	.gallery .gallery-item {
+		float: none!important;
+		width: 100%!important;
+	}
+	.gallery br { display: none; }
+
+	#sidebar-container { margin: 0 0 20px 0; }
+	#calendar_wrap td { padding: 3px 12px; }
+
+	#footer .widget { width: 100%!important; padding: 0; }
+	.sub-footer-left,
+	.sub-footer-right { width: 100%; text-align: center; }
+
+	.sub-footer-left { margin-bottom: 20px; }
+}
+
+/* #Mobile (Landscape) | Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	#main-wrap { width: 440px; }
+
+	#nav-wrap { padding: 0 10px; }
+
+	#page-container > *,
+	#footer .container > ul > li {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		margin-bottom: 20px;
+	}
+
+	.gallery .gallery-item {
+		float: left!important;
+		width: 50%!important;
+		min-height: 210px;
+	}
+
+	#sidebar-container {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.container,
+	#page-container,
+	#page-container.with-sidebar,
+	#sidebar-container,
+	#sidebar { width: 420px; }
+
+	#sidebar-container { margin: 0 0 20px 0; }
+	#calendar_wrap td { padding: 5px 20px; }
+
+}
