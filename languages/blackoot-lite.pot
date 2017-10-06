@@ -1,347 +1,332 @@
+# Copyright (C) 2017 Iceable Media
+# This file is distributed under the GNU General Public License v2 (GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Blackoot Lite 1.1\n"
-"POT-Creation-Date: 2015-07-21 11:17+0100\n"
-"PO-Revision-Date: 2015-07-21 15:34+0100\n"
-"Last-Translator: \n"
-"Language-Team: Iceable Themes\n"
-"Language: en_US\n"
+"Project-Id-Version: Blackoot Lite 1.1.18\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2017-10-06 14:36:16+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_n;_x\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ..\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: ../404.php:19
+#: 404.php:18
 msgid "Page Not Found"
 msgstr ""
 
-#: ../404.php:20 ../index.php:104 ../page.php:56 ../single.php:105
-#: ../page-templates/full-width.php:56
+#: 404.php:19 index.php:181 page-templates/full-width.php:83 page.php:83
+#: single.php:170
 msgid "What you are looking for isn't here..."
 msgstr ""
 
-#: ../404.php:21
+#: 404.php:20
 msgid "Maybe a search will help ?"
 msgstr ""
 
-#: ../comments.php:13
+#: comments.php:14
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: ../comments.php:19
-#, php-format
-msgid "One Response to %2$s"
-msgstr ""
+#: comments.php:26
+#. Translators: %1$s is the number of comments, %2$s is the post title
+msgid "%1$s Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../comments.php:30
+#: comments.php:51
 msgid "Older comments"
 msgstr ""
 
-#: ../comments.php:33
+#: comments.php:59
 msgid "Newer comments"
 msgstr ""
 
-#: ../comments.php:42
+#: comments.php:72
 msgid "Comments are closed."
 msgstr ""
 
-#: ../footer.php:23
-#, php-format
-msgid "Copyright &copy; %s %s."
+#: footer.php:37
+#. Translators: %1$s is the copyright date, %2$s is the site name (e.g.
+#. Copyright © 2017, My Website)
+msgid "Copyright &copy; %1$s, %2$s."
 msgstr ""
 
-#: ../footer.php:25
-#, php-format
-msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+#: footer.php:44
+#. Translators: "Powered by" link to WordPress.org. %1$s is the localized
+#. wordpress.org url (e.g. https:en.wordpress.org), %2$s is title attribute for
+#. the link ("Semantic Personal Publishing Platform"), %3$s is the anchor
+#. ("WordPress")
+msgid "Proudly powered by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>."
 msgstr ""
 
-#: ../footer.php:26
+#: footer.php:45
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: ../footer.php:28
+#: footer.php:46
+msgid "Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:47
 msgid "WordPress"
 msgstr ""
 
-#: ../footer.php:31
-#, php-format
-msgid "Blackoot design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+#: footer.php:52
+#. Translators: %s is a link to the author's website with the name "Iceable
+#. Themes" as anchor
+msgid "Blackoot design by %s."
 msgstr ""
 
-#: ../functions.php:112
+#: functions.php:136
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:120
+#: functions.php:145
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:204
+#: functions.php:242 functions.php:251
 msgid "Read More"
 msgstr ""
 
-#: ../functions.php:278
+#: functions.php:351
 msgid "Next Post"
 msgstr ""
 
-#: ../functions.php:284
+#: functions.php:357
 msgid "Previous Post"
 msgstr ""
 
-#: ../functions.php:345
+#: functions.php:429
 msgid "Home"
 msgstr ""
 
-#: ../functions.php:371
-msgid "Daily Archives"
-msgstr ""
-
-#: ../functions.php:372
-msgid "Monthly Archives"
-msgstr ""
-
-#: ../functions.php:373
-msgid "Yearly Archives"
-msgstr ""
-
-#: ../functions.php:374
-msgid "Author Archives"
-msgstr ""
-
-#: ../functions.php:375
-msgid "Blog Archives"
-msgstr ""
-
-#: ../functions.php:376
+#: functions.php:464
 msgid "Search Results"
 msgstr ""
 
-#: ../functions.php:377
+#: functions.php:468
 msgid "404 Error"
 msgstr ""
 
-#: ../index.php:49 ../single.php:35
-#, php-format
-msgid "View all posts by %s"
-msgstr ""
-
-#: ../index.php:54 ../single.php:40
-msgid "Category"
-msgstr ""
-
-#: ../index.php:65 ../single.php:49
-msgid "0 Comment"
-msgstr ""
-
-#: ../index.php:65 ../single.php:49
-msgid "1 Comment"
-msgstr ""
-
-#: ../index.php:65 ../single.php:49
-msgid "% Comments"
-msgstr ""
-
-#: ../index.php:65 ../single.php:49
-msgid "Comments Off"
-msgstr ""
-
-#: ../index.php:75 ../page.php:41 ../single.php:59
-#: ../page-templates/full-width.php:41
-msgid "Edit"
-msgstr ""
-
-#: ../index.php:96 ../index.php:103 ../page.php:55 ../single.php:104
-#: ../page-templates/full-width.php:55
-msgid "Not Found"
-msgstr ""
-
-#: ../index.php:97
-#, php-format
-msgid "Your search for \"%s\" did not return any result."
-msgstr ""
-
-#: ../index.php:98
-msgid "Would you like to try another search ?"
-msgstr ""
-
-#: ../index.php:113
-msgid "Previous Posts"
-msgstr ""
-
-#: ../index.php:116
-msgid "Next Posts"
-msgstr ""
-
-#: ../page.php:31 ../single.php:75 ../page-templates/full-width.php:31
-msgid "Pages:"
-msgstr ""
-
-#: ../part-title.php:22
-msgid "404: Page Not Found"
-msgstr ""
-
-#: ../part-title.php:27
-#, php-format
-msgid "Search Results for \"%s\""
-msgstr ""
-
-#: ../part-title.php:32
-#, php-format
-msgid "Tag: %s"
-msgstr ""
-
-#: ../part-title.php:37
-#, php-format
-msgid "Category: %s"
-msgstr ""
-
-#: ../part-title.php:42
-#, php-format
-msgid "Daily archives: %s"
-msgstr ""
-
-#: ../part-title.php:46
-#, php-format
-msgid "Monthly archives: %s"
-msgstr ""
-
-#: ../part-title.php:50
-#, php-format
-msgid "Yearly archives: %s"
-msgstr ""
-
-#: ../sidebar.php:16
-msgid "Recent Posts"
-msgstr ""
-
-#: ../sidebar.php:21
-msgid "Archives"
-msgstr ""
-
-#: ../sidebar.php:26
-msgid "Meta"
-msgstr ""
-
-#: ../single.php:80
-msgid "Next page"
-msgstr ""
-
-#: ../single.php:81
-msgid "Previous page"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:18
+#: inc/customizer/customizer.php:19
 msgid "Background"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:22
-msgid "Logo & Favicon"
+#: inc/customizer/customizer.php:25
+msgid "Logo"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:27
+#: inc/customizer/customizer.php:33
 msgid "Blog Settings"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:32
+#: inc/customizer/customizer.php:41
 msgid "Misc"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:37
+#: inc/customizer/customizer.php:49
 msgid "More"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:49
+#: inc/customizer/customizer.php:68
 msgid "Upload your logo"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:50
+#: inc/customizer/customizer.php:69
 msgid "If no logo is uploaded, the site title will be displayed instead."
 msgstr ""
 
-#: ../inc/customizer/customizer.php:65
-msgid "Upload a custom favicon"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:66
-msgid ""
-"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
-"GIF, or ICO."
-msgstr ""
-
-#: ../inc/customizer/customizer.php:81
+#: inc/customizer/customizer.php:90
 msgid "Blog Index Content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:86
+#: inc/customizer/customizer.php:95
 msgid "Excerpt"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:87
+#: inc/customizer/customizer.php:96
 msgid "Full content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:101
+#: inc/customizer/customizer.php:116
 msgid "Responsive Mode"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:106 ../inc/customizer/customizer.php:126
-#: ../inc/customizer/customizer.php:145 ../inc/customizer/customizer.php:164
-#: ../inc/customizer/customizer.php:183
+#: inc/customizer/customizer.php:121 inc/customizer/customizer.php:147
+#: inc/customizer/customizer.php:172 inc/customizer/customizer.php:197
+#: inc/customizer/customizer.php:222
 msgid "On"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:107 ../inc/customizer/customizer.php:127
-#: ../inc/customizer/customizer.php:146 ../inc/customizer/customizer.php:165
-#: ../inc/customizer/customizer.php:184
+#: inc/customizer/customizer.php:122 inc/customizer/customizer.php:148
+#: inc/customizer/customizer.php:173 inc/customizer/customizer.php:198
+#: inc/customizer/customizer.php:223
 msgid "Off"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:121
+#: inc/customizer/customizer.php:142
 msgid "Display header on Homepage"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:140
+#: inc/customizer/customizer.php:167
 msgid "Display header on Blog Index"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:159
+#: inc/customizer/customizer.php:192
 msgid "Display header on Single Posts"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:178
+#: inc/customizer/customizer.php:217
 msgid "Display header on Pages"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:198
+#: inc/customizer/customizer.php:243
 msgid "Get Blackoot Pro"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:199
+#: inc/customizer/customizer.php:244
 msgid ""
 "Unleash the full potential of Blackoot with tons of additional settings, "
 "advanced features and premium support."
 msgstr ""
 
-#: ../inc/customizer/customizer.php:215
+#: inc/customizer/customizer.php:266
 msgid "Blackoot Lite support forums"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:216
+#: inc/customizer/customizer.php:267
 msgid "Have a question? Need help?"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:232
+#: inc/customizer/customizer.php:289
 msgid "Rate Blackoot Lite"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:233
+#: inc/customizer/customizer.php:290
 msgid "Like this theme? We'd love to hear your feedback!"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:258
+#: inc/customizer/customizer.php:316
 msgid "Upgrade to Blackoot Pro!"
+msgstr ""
+
+#: index.php:75 single.php:53
+#. Translators: %s is the author's name
+msgid "View all posts by %s"
+msgstr ""
+
+#: index.php:87 single.php:63
+msgid "Category"
+msgstr ""
+
+#: index.php:104 single.php:78
+msgid "0 Comment"
+msgstr ""
+
+#: index.php:105 single.php:79
+msgid "1 Comment"
+msgstr ""
+
+#: index.php:106 single.php:80
+msgid "% Comments"
+msgstr ""
+
+#: index.php:108 single.php:82
+msgid "Comments Off"
+msgstr ""
+
+#: index.php:122 page-templates/full-width.php:59 page.php:59 single.php:96
+msgid "Edit"
+msgstr ""
+
+#: index.php:162 index.php:180 page-templates/full-width.php:82 page.php:82
+#: single.php:169
+msgid "Not Found"
+msgstr ""
+
+#: index.php:167
+#. Translators: %s is the search term
+msgid "Your search for \"%s\" did not return any result."
+msgstr ""
+
+#: index.php:172
+msgid "Would you like to try another search ?"
+msgstr ""
+
+#: index.php:194
+msgid "Previous Posts"
+msgstr ""
+
+#: index.php:200
+msgid "Next Posts"
+msgstr ""
+
+#: page-templates/full-width.php:44 page.php:44 single.php:133
+msgid "Pages:"
+msgstr ""
+
+#: part-title.php:22
+msgid "404: Page Not Found"
+msgstr ""
+
+#: part-title.php:28
+#. Translators: %s is the search term.
+msgid "Search Results for \"%s\""
+msgstr ""
+
+#: sidebar.php:18
+msgid "Recent Posts"
+msgstr ""
+
+#: sidebar.php:23
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:28
+msgid "Meta"
+msgstr ""
+
+#: single.php:138
+msgid "Next page"
+msgstr ""
+
+#: single.php:139
+msgid "Previous page"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Blackoot Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.iceablethemes.com/shop/blackoot-lite/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"An Elegant, Multi-purpose, Responsive WordPress Theme. Perfect for "
+"photography or music oriented blogs as well as portfolio and creative "
+"business websites. It features two widgetizable areas in the sidebar and "
+"the optional footer, two custom menu locations in the navbar and footer, "
+"optional tagline display, custom logo and favicon, custom header image and "
+"custom background. Blackoot Lite is also translation ready for non-English "
+"sites, a .pot file is included to get started quickly, and a French (fr_FR) "
+"translation is already included."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Iceable Media"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.iceablethemes.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width Page Template, No Sidebar"
 msgstr ""
