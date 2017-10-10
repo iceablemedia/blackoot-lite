@@ -161,7 +161,11 @@
 
 /* #Responsive Menu */
 
-#navbar select { display: none; margin: auto; }
+#navbar select {
+	color: #333;
+	display: none;
+	margin: auto;
+}
 
 /* Header Image */
 
@@ -844,10 +848,14 @@ p.comment-form-url
 
 #sub-footer {
 	background: #000;
-	font-size: 11px;
+	font-size: 0;
 	color: #ccc;
 	padding: 20px 0;
 	clear: both;
+}
+
+#sub-footer [class^="sub-footer"] {
+    font-size: 11px;
 }
 
 #sub-footer p {

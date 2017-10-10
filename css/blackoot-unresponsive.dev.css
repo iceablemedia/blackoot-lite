@@ -773,6 +773,7 @@ or wrap each row of columns in a <div class="row"> */
 
 /* #Responsive Menu */
 #navbar select {
+	color: #333333;
 	display: none;
 	margin: auto;
 }
@@ -1526,10 +1527,14 @@ p.comment-form-url {
 /* Sub footer */
 #sub-footer {
 	background: #000000;
-	font-size: 11px;
+	font-size: 0;
 	color: #cccccc;
 	padding: 20px 0;
 	clear: both;
+}
+
+#sub-footer [class^="sub-footer"] {
+	font-size: 11px;
 }
 
 #sub-footer p {

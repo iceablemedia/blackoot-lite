@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blackoot Lite 1.1.18\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-10-06 14:36:16+00:00\n"
+"POT-Creation-Date: 2017-10-06 15:11:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -81,35 +81,35 @@ msgstr ""
 msgid "Blackoot design by %s."
 msgstr ""
 
-#: functions.php:136
+#: functions.php:112
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:121
 msgid "Footer"
 msgstr ""
 
-#: functions.php:242 functions.php:251
+#: functions.php:218 functions.php:227
 msgid "Read More"
 msgstr ""
 
-#: functions.php:351
+#: functions.php:325
 msgid "Next Post"
 msgstr ""
 
-#: functions.php:357
+#: functions.php:331
 msgid "Previous Post"
 msgstr ""
 
-#: functions.php:429
+#: functions.php:401
 msgid "Home"
 msgstr ""
 
-#: functions.php:464
+#: functions.php:436
 msgid "Search Results"
 msgstr ""
 
-#: functions.php:468
+#: functions.php:440
 msgid "404 Error"
 msgstr ""
 
