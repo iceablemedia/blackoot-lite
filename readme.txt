@@ -63,6 +63,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.1.19 =
+October 10th, 2017
+* Refactored all PHP code to conform to the WordPress coding standards
+
 = 1.1.18 =
 August 25th, 2017
 * Updated: Font-Awesome to version 4.7.0
