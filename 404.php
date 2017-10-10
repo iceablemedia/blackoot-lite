@@ -12,21 +12,20 @@
 get_header();
 get_template_part( 'part-title' );
 
-?><div class="container" id="main-content"><?php
+?>
+<div class="container" id="main-content">
+	<div id="page-container" class="with-sidebar">
+		<h2><?php esc_html_e( 'Page Not Found', 'blackoot-lite' ); ?></h2>
+		<p><?php esc_html_e( 'What you are looking for isn\'t here...', 'blackoot-lite' ); ?></p>
+		<p><?php esc_html_e( 'Maybe a search will help ?', 'blackoot-lite' ); ?></p>
+		<p><?php get_search_form(); ?></p>
+	</div>
 
-?><div id="page-container" class="with-sidebar"><?php
+	<div id="sidebar-container"><ul id="sidebar">
+		<?php get_sidebar(); ?>
+	</ul></div>
 
-?><h2><?php _e('Page Not Found', 'blackoot-lite'); ?></h2><?php
-?><p><?php _e('What you are looking for isn\'t here...', 'blackoot-lite'); ?></p><?php
-?><p><?php _e('Maybe a search will help ?', 'blackoot-lite'); ?></p><?php
-?><p><?php get_search_form(); ?></p><?php
-
-?></div><?php
-
-?><div id="sidebar-container"><ul id="sidebar"><?php
-	get_sidebar();
-?></ul></div><?php // End sidebar
-
-?></div><?php // End main content
+</div>
+<?php
 
 get_footer();
