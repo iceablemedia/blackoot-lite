@@ -84,6 +84,9 @@ Source: http://fontawesome.io/
 
 ## Changelog
 
+### 1.1.21
+January 31th, 2018
+* Merged Google fonts requests into one
 ### 1.1.20
 November 18th, 2017
 * Updated Readme.txt file to the new format for WordPress.org
