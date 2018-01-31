@@ -1,12 +1,12 @@
 {
   "name": "blackoot-lite",
-  "version": "1.0.0",
+  "version": "1.1.21",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Iceable Media",
+  "author": "Iceable Media - Mathieu Sarrasin",
   "license": "GPL-2.0",
   "devDependencies": {
     "grunt": "^0.4.5",

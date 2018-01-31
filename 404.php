@@ -3,7 +3,7 @@
  *
  * Blackoot Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
- * Copyright 2014-2017 Mathieu Sarrasin - Iceable Media
+ * Copyright 2014-2018 Iceable Media - Mathieu Sarrasin
  *
  * 404 Page Template
  *
