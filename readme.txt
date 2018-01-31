@@ -2,9 +2,9 @@
 
 **Contributors:** iceable
 **Requires at least:** WordPress 4.7
-**Tested up to:** WordPress 4.9
-**Stable tag:** 1.1.20
-**Version:** 1.1.20
+**Tested up to:** WordPress 4.9.2
+**Stable tag:** 1.1.21
+**Version:** 1.1.21
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 **Tags:** one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, footer-widgets, editor-style, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, entertainment, photography, portfolio
@@ -66,6 +66,8 @@ Source: http://fontawesome.io/
 ### 1.1.21
 January 31th, 2018
 * Merged Google fonts requests into one
+* Updated copyright
+
 ### 1.1.20
 November 18th, 2017
 * Updated Readme.txt file to the new format for WordPress.org
