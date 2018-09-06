@@ -26,11 +26,11 @@ get_template_part( 'part-title' );
 				?>
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<h3 class="entry-title">
+					<h2 class="entry-title">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 							<?php the_title(); ?>
 						</a>
-					</h3>
+					</h2>
 
 					<?php
 					/* Post thumbnail (Featured Image) */

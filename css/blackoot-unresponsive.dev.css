@@ -867,7 +867,7 @@ or wrap each row of columns in a <div class="row"> */
 	max-width: 100%;
 }
 
-h3.entry-title {
+.entry-title {
 	text-transform: uppercase;
 	font-size: 24px;
 	margin-bottom: 10px;
@@ -1682,12 +1682,12 @@ h6 {
 	font-size: 12px;
 }
 
-#page-container h3.entry-title {
+#page-container .entry-title {
 	font-size: 24px;
 }
 
-#page-container h3.entry-title a,
-#page-container h3.entry-title a:visited {
+#page-container .entry-title a,
+#page-container .entry-title a:visited {
 	color: #ccc;
 }
 
@@ -1999,7 +1999,7 @@ h6 a:visited {
 #page-container h5 a:visited,
 #page-container h6 a,
 #page-container h6 a:visited,
-#page-container h3.entry-title a:hover {
+#page-container .entry-title a:hover {
 	color: #b99128;
 }
 

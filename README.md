@@ -84,6 +84,10 @@ Source: http://fontawesome.io/
 
 ## Changelog
 
+### 1.1.22
+
+* Enhanced: Post titles in blog index are now h2 headings
+
 ### 1.1.21
 January 31th, 2018
 * Merged Google fonts requests into one

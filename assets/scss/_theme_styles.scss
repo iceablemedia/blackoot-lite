@@ -244,7 +244,7 @@
 	max-width: 100%;
 }
 
-h3.entry-title {
+.entry-title {
 	text-transform: uppercase;
 	font-size: 24px;
 	margin-bottom: 10px;
@@ -968,10 +968,10 @@ h4 { font-size: 14px; }
 h5 { font-size: 13px; }
 h6 { font-size: 12px; }
 
-#page-container h3.entry-title { font-size: 24px; }
+#page-container .entry-title { font-size: 24px; }
 
-#page-container h3.entry-title a,
-#page-container h3.entry-title a:visited { color: #CCC; }
+#page-container .entry-title a,
+#page-container .entry-title a:visited { color: #CCC; }
 
 p {
 	margin: 0 0 20px 0;
@@ -1259,7 +1259,7 @@ h5 a:visited, h6 a:visited {
 #page-container h4 a, #page-container h4 a:visited,
 #page-container h5 a, #page-container h5 a:visited,
 #page-container h6 a, #page-container h6 a:visited,
-#page-container h3.entry-title a:hover {
+#page-container .entry-title a:hover {
 	color: #b99128;
 }
 
