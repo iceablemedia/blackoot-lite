@@ -2,7 +2,7 @@
 
 **Contributors:** iceable  
 **Requires at least:** WordPress 4.7  
-**Tested up to:** WordPress 4.9.2  
+**Tested up to:** WordPress 5.1  
 **Stable tag:** 1.1.22  
 **Version:** 1.1.22  
 **License:** GPLv2 or later  
