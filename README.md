@@ -3,8 +3,8 @@
 **Contributors:** iceable  
 **Requires at least:** WordPress 4.7  
 **Tested up to:** WordPress 4.9.2  
-**Stable tag:** 1.1.21  
-**Version:** 1.1.21  
+**Stable tag:** 1.1.22  
+**Version:** 1.1.22  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, footer-widgets, editor-style, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, entertainment, photography, portfolio
@@ -85,7 +85,7 @@ Source: http://fontawesome.io/
 ## Changelog
 
 ### 1.1.22
-
+February 28th, 2019
 * Enhanced: Post titles in blog index are now h2 headings
 * Updated copyright
 
