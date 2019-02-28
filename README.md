@@ -51,7 +51,7 @@ Blackoot Lite is the free version of [Blackoot Pro](https://www.iceablethemes.co
 ### Translation
 
 Bundled translations (GPL Licensed):
-* French (fr_FR) translation: Copyright 2014-2018, Iceable Media - Mathieu Sarrasin (https://www.iceablethemes.com)
+* French (fr_FR) translation: Copyright 2014-2019, Iceable Media - Mathieu Sarrasin (https://www.iceablethemes.com)
 * Spanish (es_ES) translation: Copyright 2016, David Ospina <dao_star_2@hotmail.com> (http://interlunas.vzpla.net/)
 
 Translating this theme into your own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
@@ -64,7 +64,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 ## Copyright
 
-Blackoot Lite WordPress Theme, Copyright 2014-2018 Iceable Media - Mathieu Sarrasin (https://www.iceablethemes.com)  
+Blackoot Lite WordPress Theme, Copyright 2014-2019 Iceable Media - Mathieu Sarrasin (https://www.iceablethemes.com)  
 Blackoot Lite is distributed under the terms of the GNU GPL
 
 Blackoot Lite bundles the following third-party resources:
@@ -87,6 +87,7 @@ Source: http://fontawesome.io/
 ### 1.1.22
 
 * Enhanced: Post titles in blog index are now h2 headings
+* Updated copyright
 
 ### 1.1.21
 January 31th, 2018
