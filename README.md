@@ -3,8 +3,8 @@
 **Contributors:** iceable  
 **Requires at least:** WordPress 4.7  
 **Tested up to:** WordPress 5.1  
-**Stable tag:** 1.1.22  
-**Version:** 1.1.22  
+**Stable tag:** 1.1.23  
+**Version:** 1.1.23  
 **Tested up to:** 5.5  
 **Requires PHP:** 5.6  
 **License:** GPLv2 or later  
@@ -66,7 +66,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 ## Copyright
 
-Blackoot Lite WordPress Theme, Copyright 2014-2020 Iceable Themes - https://www.iceablethemes.com
+Blackoot Lite WordPress Theme, Copyright 2014-2020 Iceable Themes - https://www.iceablethemes.com  
 Blackoot Lite is distributed under the terms of the GNU GPL
 
 Blackoot Lite bundles the following third-party resources:

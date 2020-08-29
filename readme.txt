@@ -3,8 +3,8 @@
 **Contributors:** iceable
 **Requires at least:** WordPress 4.7
 **Tested up to:** WordPress 5.1
-**Stable tag:** 1.1.22
-**Version:** 1.1.22
+**Stable tag:** 1.1.23
+**Version:** 1.1.23
 **Tested up to:** 5.5
 **Requires PHP:** 5.6
 **License:** GPLv2 or later
