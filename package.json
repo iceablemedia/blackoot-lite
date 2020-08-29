@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Iceable Media - Mathieu Sarrasin",
+  "author": "Iceable Themes",
   "license": "GPL-2.0",
   "devDependencies": {
     "grunt": "^0.4.5",
