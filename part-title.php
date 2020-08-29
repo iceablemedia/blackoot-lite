@@ -57,7 +57,7 @@ if ( $blackoot_page_title ) :
 				<?php
 			endif;
 			?>
-			<h1><?php echo esc_html( $blackoot_page_title ); ?></h1>
+			<h1><?php echo wp_kses( $blackoot_page_title, 'post' ); ?></h1>
 		</div>
 	</div>
 	<?php
