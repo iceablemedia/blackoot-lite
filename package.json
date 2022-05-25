@@ -9,7 +9,7 @@
   "author": "Iceable Themes",
   "license": "GPL-2.0",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.5.3",
     "load-grunt-tasks": "^3.3.0",
     "grunt-sass": "^1.1.0",
     "grunt-postcss": "^0.7.1",
